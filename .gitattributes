@@ -1,0 +1,3 @@
+# Compact, validated derivatives use ordinary Git; originals stay in ignored .data/.
+# Publication rights and explicit save authorization are still required.
+/audio/day-*/part-*.opus binary -filter

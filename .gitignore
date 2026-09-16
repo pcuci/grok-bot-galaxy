@@ -1,0 +1,53 @@
+# Video is never a repository artifact, including through LFS.
+*.[mM][pP]4
+*.[mM][kK][vV]
+*.[wW][eE][bB][mM]
+*.[mM][oO][vV]
+*.[aA][vV][iI]
+*.[fF][lL][vV]
+*.[mM][pP][eE][gG]
+*.[mM][pP][gG]
+*.[mM]4[vV]
+*.[wW][mM][vV]
+*.[oO][gG][vV]
+*.3[gG][pP]
+*.[mM][tT][sS]
+*.[mM]2[tT][sS]
+/data/**/*.[tT][sS]
+
+# Originals, PCM, models, raw ASR, and local experiments never enter Git.
+/.data/
+/data/
+*.[mM]4[aA]
+*.[wW][aA][vV]
+*.[fF][lL][aA][cC]
+*.[mM][pP]3
+*.[oO][pP][uU][sS]
+
+# Only validated compact derivatives are candidates for ordinary Git storage.
+!/audio/day-*/part-*.opus
+
+# Models, downloads in progress, caches, and temporary artifacts.
+*.onnx
+*.onnx.data
+*.pt
+*.pth
+*.safetensors
+*.part
+*.ytdl
+*.tmp
+.prepare-audio-*/
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.cache/
+/tmp/
+/node_modules/
+
+# Never version credentials or local provider configuration.
+.env
+.env.*
+!.env.example
+cookies.txt

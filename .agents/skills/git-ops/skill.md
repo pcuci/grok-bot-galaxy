@@ -1,0 +1,1 @@
+../../../../../home.cloud/governance/.agents/codex/skills/core/git-ops/skill.md

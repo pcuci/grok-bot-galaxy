@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "sourcePackage": "../../../home.cloud/governance/.agents/codex",
+  "imports": [{ "bundle": "baseline" }],
+  "skills": [],
+  "localOverrides": {
+    "skills": [
+      { "name": "broadcast-ingest", "source": "repo" },
+      { "name": "event-synthesize", "source": "repo" },
+      { "name": "local-transcribe", "source": "repo" },
+      { "name": "transcript-curate", "source": "repo" }
+    ],
+    "disabledSkills": []
+  },
+  "components": ["skills", "agents"],
+  "include": [],
+  "exclude": [],
+  "x-governance": {
+    "optional": true,
+    "observedRevision": "42c3b85d3a2fe08c6482a778e727afc38c4aafe6"
+  }
+}

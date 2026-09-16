@@ -1,0 +1,1 @@
+../../../../../home.cloud/governance/.agents/codex/skills/core/progress/skill.md

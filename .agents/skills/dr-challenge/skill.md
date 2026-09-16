@@ -1,0 +1,1 @@
+../../../../../home.cloud/governance/.agents/codex/skills/core/dr-challenge/skill.md

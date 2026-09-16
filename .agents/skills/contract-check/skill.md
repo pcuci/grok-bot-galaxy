@@ -1,0 +1,1 @@
+../../../../../home.cloud/governance/.agents/codex/skills/lang/contract-check/skill.md
