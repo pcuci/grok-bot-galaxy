@@ -1,0 +1,1553 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-09-24T14:45:29.495773+00:00",
+  "status": "save_preflight_structural_integrity_pass_audio_review_pending",
+  "scope": {
+    "allowed_writes": [
+      "docs/days/day-02/validation.json",
+      "docs/days/day-03/validation.json"
+    ],
+    "network": false,
+    "git_operations": false,
+    "raw_modifications": false,
+    "other_document_writes": false,
+    "expected_concurrency": "Parent root/docs reference edits only; day-local input/artifact drift stops report writes."
+  },
+  "checks": {
+    "raw_baseline_integrity": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:45:25.437158+00:00",
+      "finished_utc": "2026-09-24T14:45:29.364344+00:00",
+      "elapsed_seconds": 3.927189,
+      "files": 96,
+      "bytes": 1165816222,
+      "comparison": {
+        "added": [],
+        "missing": [],
+        "changed": []
+      },
+      "baseline_inventory": {
+        "bytes": 20196,
+        "sha256": "ce45ea4d00ce6be13597ec9884799eea1bcac05b31c263a881649f93733dce7c"
+      },
+      "baseline_unchanged": true,
+      "method": "Fresh full file-set, byte-count and SHA-256 comparison against unchanged original input-inventory.json; no rebaseline. Day 3 also compares stored symlink flags; Day 2 baseline has no symlink flags."
+    },
+    "ASR_export_manifest_hashes": {
+      "passed": true,
+      "exports": 51,
+      "mismatches": [],
+      "manifest": {
+        "bytes": 24635,
+        "sha256": "a80b646527c71a5168ddc082a2f6708ef30e89f897648cc987f4255322685829",
+        "symlink": false
+      },
+      "method": "Current raw hashes compared with original ASR manifest output_sha256 entries; no export regeneration."
+    },
+    "coverage_group_routing": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:42:16.177476+00:00",
+      "finished_utc": "2026-09-24T14:42:20.462182+00:00",
+      "elapsed_seconds": 4.284714,
+      "chapters": 33,
+      "groups": 157,
+      "regions": 3806,
+      "gaps": 3797,
+      "errors": [],
+      "method": "Fresh in-memory checks: complete chapter/group partitions; every raw region identity, time and text hash; exact group intersections and chapter routing; exact gap complement; chapter heading times and draft labels; chapter input sets, local/global ranges and hashes; part counts and durations. No raw text rendered to model.",
+      "ledger_sha256": "e8e7261caa90e6a8facfbe7656b691f57f289bbc0ed20dffd02fd1ebcc567da2",
+      "summary_rechecked_utc": "2026-09-24T14:45:29.396755+00:00",
+      "summary_errors": [],
+      "signature_check_recorded_separately": true
+    },
+    "part_metadata_and_signatures": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:43:25.325999+00:00",
+      "finished_utc": "2026-09-24T14:43:25.334727+00:00",
+      "elapsed_seconds": 0.008735,
+      "parts": 16,
+      "errors": [],
+      "method": "Exact signature dict with model/checkpoint identity and per-part audio_sha256, complete flag and source offset; input hashes still match original baseline."
+    },
+    "local_Markdown_structure": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:45:29.396774+00:00",
+      "finished_utc": "2026-09-24T14:45:29.462425+00:00",
+      "elapsed_seconds": 0.065664,
+      "files": 40,
+      "errors": [],
+      "checks": [
+        "one H1",
+        "heading progression and duplicate heading text",
+        "no trailing whitespace or tabs",
+        "single final newline",
+        "balanced fences with language",
+        "table separators, consistent columns and surrounding blank lines"
+      ],
+      "markdownlint_available": false,
+      "limitation": "Bounded standard-library fallback, not full markdownlint. No dependencies installed. Unicode timing notation in the separate session review is not treated as a curation-format failure; no new universal line-length rule applied to existing Day 3 prose."
+    },
+    "local_links": {
+      "passed": true,
+      "relative_links": 340,
+      "anchors": 48,
+      "broken": [],
+      "method": "Fresh inline relative Markdown link targets and GitHub-style heading fragments, including day-local session review. No external URLs fetched.",
+      "external_local_target_fingerprints": {},
+      "concurrency_limit": "Parent root/docs reference edits are expected. External target fingerprints are observation-time evidence, not a freeze or authorization to edit those files."
+    },
+    "JSON_parse": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:45:29.462769+00:00",
+      "finished_utc": "2026-09-24T14:45:29.495585+00:00",
+      "files": [
+        "coverage-ledger.json",
+        "input-inventory.json",
+        "validation.json"
+      ],
+      "errors": [],
+      "duplicate_keys": [],
+      "prospective_report_roundtrip": "Checked in memory before writing; final on-disk check recorded in tool handoff, not recursively self-attested."
+    },
+    "changed_document_source_conventions": {
+      "passed": true,
+      "reviewed_files": [
+        "README.md"
+      ],
+      "findings": [],
+      "method": "Read changed documents against day source records, chapter conventions and session-analysis guidance. Full-day ASR curation remains distinct from separately authorized provisional caption review. Readiness, attribution, reported-versus-verified outcomes and rights limits remain explicit.",
+      "quotations": "No audio-verified quotation claimed. SDR partial-trust wording is now a paraphrase; residual quoted tokens are named labels/uncertain machine-rendering candidates, not verified speech.",
+      "limitation": "Not a fresh full-day semantic or audio audit. Historical reading claims were not rerun."
+    },
+    "artifact_set_and_hashes": {
+      "passed": true,
+      "artifacts": 42,
+      "changed_since_previous_report": [
+        "README.md"
+      ],
+      "added_since_previous_report": [],
+      "removed_since_previous_report": [],
+      "unchanged": 41,
+      "method": "All current day-local files inventoried with byte count and SHA-256, excluding this report to avoid recursion. Expected changed content inspected first. Current fingerprints do not mean content blockers are waived."
+    }
+  },
+  "failed_checks": [],
+  "acceptance": {
+    "full_ASR_text_read": "Prior curation read all 16 parts; no new full-text reading in save-preflight. Export validation results reused only after exact raw baseline/hash match.",
+    "audio_review": "not performed; required skill gate unmet",
+    "quotations": "none audio-verified; derivative uses paraphrase",
+    "semantic_completeness": "editorial intent and explicit omission ledger, not mechanically certified",
+    "external_outcomes": "not independently verified",
+    "redistribution_rights": "unestablished",
+    "event_synthesis": "not run"
+  },
+  "artifacts_excluding_this_report": {
+    "README.md": {
+      "bytes": 3372,
+      "sha256": "4659851cc622c53f199e862948320540539587ee04b9c17ad18dc7f4d4541df7"
+    },
+    "coverage-ledger.json": {
+      "bytes": 2691055,
+      "sha256": "e8e7261caa90e6a8facfbe7656b691f57f289bbc0ed20dffd02fd1ebcc567da2"
+    },
+    "editorial-change-log.md": {
+      "bytes": 7273,
+      "sha256": "dc7b464d92cb2643a0da24746318196561a9fa63dbb66749d5946f011dbf18e2"
+    },
+    "entities.md": {
+      "bytes": 16454,
+      "sha256": "43b182535994af2248e8e77c7dcca8ff674bf3fd8b88d275ee996ed0a297b3b5"
+    },
+    "gap-ledger.md": {
+      "bytes": 4977,
+      "sha256": "46bfa340eeef2fa609bf27da83904b212781f884e80121859898c1edb29315bf"
+    },
+    "input-inventory.json": {
+      "bytes": 20196,
+      "sha256": "ce45ea4d00ce6be13597ec9884799eea1bcac05b31c263a881649f93733dce7c"
+    },
+    "review-queue.md": {
+      "bytes": 8751,
+      "sha256": "890614e5961c421dca36e195ee40cc9c709506290332fb5a49bae46903b9560a"
+    },
+    "sources.md": {
+      "bytes": 7249,
+      "sha256": "e6bf67f7df0139f982f015770e415e0b4eaee3f64bd4c32d56b1c655b2586a14"
+    },
+    "transcripts/01-opening-and-overnight-rework.md": {
+      "bytes": 7331,
+      "sha256": "81249126e4ec05bd0559a7f18be96d43767c121a082760aacabdfe21c243e6c0"
+    },
+    "transcripts/02-revops-task-routing.md": {
+      "bytes": 4290,
+      "sha256": "f1a3d9396c69c2deeee885439af98ae4ad606db95e36e7c4dbed70250f20ecd3"
+    },
+    "transcripts/03-lead-review-app-and-guardrails.md": {
+      "bytes": 5071,
+      "sha256": "ac37c8312a79313b69c765dfe509cbdfdf1afb9b22cd911eda1bd442f542940d"
+    },
+    "transcripts/04-revops-questions-and-transition.md": {
+      "bytes": 4804,
+      "sha256": "82b4be20c6b72827fe1ceabdd503923320f764a8c2176c6f904a7c6b74062b3a"
+    },
+    "transcripts/05-production-setup-and-launch-checklist.md": {
+      "bytes": 4930,
+      "sha256": "85320872d1070bf015e83be194d67bf4a80a57067db22cf2eaddd6bbebf22b28"
+    },
+    "transcripts/06-practice-match-and-playtest-release.md": {
+      "bytes": 5187,
+      "sha256": "b0e9f843409ae8582b4533a4489a8d555c36f08e9276f0f269eb38d21f40be05"
+    },
+    "transcripts/07-launch-metrics-and-matchmaking-doubts.md": {
+      "bytes": 5571,
+      "sha256": "76703ac9e0ad2020e679765a783ec3b9489a375dea1c4d0c93f60a7821d94dd1"
+    },
+    "transcripts/08-feedback-intake-and-first-bug-triage.md": {
+      "bytes": 5946,
+      "sha256": "1e279f1ef97b49b7b6db55476bacb12954eeb3e19935284384a813f961242d43"
+    },
+    "transcripts/09-expanding-the-repair-loop.md": {
+      "bytes": 4364,
+      "sha256": "92d4d4d8c2e2cd6c9ab3bdf309c6b25d00977654d571ad1d1ab5ded9f7e8c6fc"
+    },
+    "transcripts/10-enterprise-video-and-break.md": {
+      "bytes": 2925,
+      "sha256": "49c0d3d29ec132df66bf479fcc96dc1fb13684c258108badce2a7cbfa080e978"
+    },
+    "transcripts/11-vincent-growth-ideas.md": {
+      "bytes": 5935,
+      "sha256": "ed25bb0d15714f5864b62145e8e2032d44ead7b336d9140aad92c6bd173ab2eb"
+    },
+    "transcripts/12-vincent-bot-onboarding-and-promotions.md": {
+      "bytes": 3596,
+      "sha256": "b4cc967f6c0971469e72486ba767f4eda3a715bb1a6ea108f2ee61431f917972"
+    },
+    "transcripts/13-marketing-ops-guest-and-cerebro.md": {
+      "bytes": 4142,
+      "sha256": "8d9cff53d3cf3ae43e192c1abecc2aa8596b85b42cab6c60b203c92fdf3c9661"
+    },
+    "transcripts/14-advertiser-personas-and-unconnected-prospecting.md": {
+      "bytes": 5548,
+      "sha256": "ff211882259f905867b467ff19aadf327ad9f9c778e6f788a2aa211abb8dd09c"
+    },
+    "transcripts/15-post-sales-team-and-meeting-demo.md": {
+      "bytes": 4497,
+      "sha256": "2fa2e99d75a398685c37acb0700535d05469d30d77669c6330378a1954132677"
+    },
+    "transcripts/16-post-sales-drafts-forms-and-staff-meeting.md": {
+      "bytes": 5104,
+      "sha256": "5690e4b93eeef94dc8b32091a3eb7fcdc29dbfb0185ff8048f5a6c74b00e1542"
+    },
+    "transcripts/17-post-sales-setup-cost-and-human-work.md": {
+      "bytes": 5446,
+      "sha256": "ad09f523a3418de068001515601516ed3d22b8aa01a11836139c244ae1a278f5"
+    },
+    "transcripts/18-post-sales-verification-and-migration-questions.md": {
+      "bytes": 5856,
+      "sha256": "52292f76b9c050a61b4302469444842cf66112348c31a991e32fdf36c45c04d9"
+    },
+    "transcripts/19-launch-data-and-mobile-playthrough.md": {
+      "bytes": 5872,
+      "sha256": "b3d15d85f830d10da0431e06bc87ca6dc6e6d49e80b985430abe09b7537126d2"
+    },
+    "transcripts/20-phone-feedback-and-secret-handling.md": {
+      "bytes": 4297,
+      "sha256": "0369145d1c637769a8d637db7e8ff3cca818c5c96771b52b20536ec2d87ffb54"
+    },
+    "transcripts/21-analytics-templates-and-ui-delivery.md": {
+      "bytes": 5520,
+      "sha256": "fc6f4508344a0bc30fcd3dd873e88308b21d97c2758938118bef9f230b1fceaf"
+    },
+    "transcripts/22-recap-stripe-link-and-sponsored-cards.md": {
+      "bytes": 4781,
+      "sha256": "95c14ef053267a4b75737b083ffd545991ae5f25e81f84f394a06f2f10ce3e12"
+    },
+    "transcripts/23-voice-subscriptions-and-first-dollar-goal.md": {
+      "bytes": 3859,
+      "sha256": "322b94aa0cd1c1209abf91550f7f6fc80415f41081ff7a5c621a7f3b2687f197"
+    },
+    "transcripts/24-link-demo-limits-and-personal-use-cases.md": {
+      "bytes": 3753,
+      "sha256": "2878504239021988dd53208a7c0351182c376501f8a003e8770ffb0e22109c64"
+    },
+    "transcripts/25-marketing-workshop-research-and-positioning.md": {
+      "bytes": 5177,
+      "sha256": "e9552f676b0ed838f57b313335e3f4e467ca9120efd5f197fae0dfec3109c29d"
+    },
+    "transcripts/26-marketing-campaign-build-and-automation.md": {
+      "bytes": 4879,
+      "sha256": "ec163b291446e0581cb9344c76501b831a6f0d1c92394d3250b2a9033326ac68"
+    },
+    "transcripts/27-marketing-questions-and-permission-limits.md": {
+      "bytes": 5393,
+      "sha256": "42c41ff67e1e0f2438622723bd38c054bd251848798a5e80262e241a6ec9159a"
+    },
+    "transcripts/28-eric-joins-voice-prs-and-sharing.md": {
+      "bytes": 4652,
+      "sha256": "61d57256872127509fd94b66b47719b4ee969c4ea5bc48491976092446fa9be7"
+    },
+    "transcripts/29-engineering-rigor-and-new-game-bugs.md": {
+      "bytes": 5724,
+      "sha256": "b26e22996d66744743a51ef5cdcc2d8c6c66a34cebbda34e454a90cbd07753f5"
+    },
+    "transcripts/30-broken-ad-auction-and-feedback-projects.md": {
+      "bytes": 4790,
+      "sha256": "53ef94e2ed90e25c9c00fd7873e994072af6b9883bafa615663dfd5820b5495d"
+    },
+    "transcripts/31-final-build-check-in-and-unfinished-ads.md": {
+      "bytes": 5314,
+      "sha256": "ce443302c597c6b39ffd9372d5fa08574be7fa0b8c01662cc96e6558dd7fa4aa"
+    },
+    "transcripts/32-host-reflections-on-distribution-and-restraint.md": {
+      "bytes": 4485,
+      "sha256": "5ed141e15cb9d15282dc94cfe493d9592f6724f55406115889e6ae2de86c1b91"
+    },
+    "transcripts/33-closing-metrics-outage-and-failed-sponsorship-test.md": {
+      "bytes": 5315,
+      "sha256": "78d8ce52a5fcc2ceb5b3d38a6e486d80eec02b8565796990243c3996a307e060"
+    },
+    "transcripts/README.md": {
+      "bytes": 14021,
+      "sha256": "bbd23fe2b5d0c4d33563fe69de53b3c0882cdcfa6ac3e5a7b5355080595b5c6d"
+    }
+  },
+  "output_counts": {
+    "chapters": 33,
+    "Markdown": 40,
+    "files_including_this_report": 43
+  },
+  "method": "Bounded Python standard-library checks executed in memory via terminal; only the two authorized validation.json reports written. Full invocations in task tool transcript. No scripts or caches persisted.",
+  "validation_history": [
+    {
+      "result": "first pass: local_links failed only because validation.json did not exist until the report was written",
+      "findings": [
+        [
+          "README.md",
+          "validation.json",
+          "missing_target"
+        ],
+        [
+          "review-queue.md",
+          "validation.json",
+          "missing_target"
+        ],
+        [
+          "sources.md",
+          "validation.json",
+          "missing_target"
+        ],
+        [
+          "transcripts/README.md",
+          "../validation.json",
+          "missing_target"
+        ]
+      ]
+    },
+    {
+      "result": "second link pass after report creation: passed; other 42 artifact hashes unchanged"
+    },
+    {
+      "result": "Pre-repair validation snapshot retained; original failures remain in preceding history entries",
+      "checked_utc": "2026-09-24T12:54:42.583175+00:00",
+      "status": "structural_pass_ASR_draft_audio_gates_unmet",
+      "checks": {
+        "raw_baseline_integrity": {
+          "passed": true,
+          "details": {
+            "baseline_files": 96,
+            "current_files": 96,
+            "bytes": 1165816222,
+            "added": [],
+            "missing": [],
+            "changed": [],
+            "method": "Read-only SHA-256, size, symlink flag and complete regular-file-set comparison"
+          }
+        },
+        "ASR_export_manifest_hashes": {
+          "passed": true,
+          "details": {
+            "exports": 51,
+            "mismatches": []
+          }
+        },
+        "WAV_PCM_identity": {
+          "passed": true,
+          "details": {
+            "parts": 16,
+            "samples": 459237717,
+            "duration_seconds": 28702.3573125,
+            "pcm_sha256": "e99f1541358af21cbef3ce270540a2e07d1c660531b5c1921da309f7423245d7",
+            "bad_parts": [],
+            "method": "WAV metadata and file hashes plus concatenated payload SHA-256; no new decode/listening"
+          }
+        },
+        "source_M4A_hash": {
+          "passed": true,
+          "details": {
+            "sha256": "f121e311238c48e0b6cc44ddc52726cbbd0b4bfa0fa6705c849b1c57ef56a558"
+          }
+        },
+        "combined_JSON_offsets": {
+          "passed": true,
+          "details": {
+            "regions": 3806,
+            "method": "Exact part JSON text and float local-plus-offset comparison"
+          }
+        },
+        "TXT_SRT_JSON_consistency": {
+          "passed": true,
+          "details": {
+            "method": "All nonempty texts and ordering equal JSON; timestamps within 1.001 ms serialization tolerance; sequential SRT IDs",
+            "inputs": [
+              {
+                "input": "part-01",
+                "regions": 207,
+                "nonempty": 207,
+                "txt": 207,
+                "srt": 207
+              },
+              {
+                "input": "part-02",
+                "regions": 288,
+                "nonempty": 288,
+                "txt": 288,
+                "srt": 288
+              },
+              {
+                "input": "part-03",
+                "regions": 218,
+                "nonempty": 218,
+                "txt": 218,
+                "srt": 218
+              },
+              {
+                "input": "part-04",
+                "regions": 247,
+                "nonempty": 247,
+                "txt": 247,
+                "srt": 247
+              },
+              {
+                "input": "part-05",
+                "regions": 288,
+                "nonempty": 288,
+                "txt": 288,
+                "srt": 288
+              },
+              {
+                "input": "part-06",
+                "regions": 201,
+                "nonempty": 199,
+                "txt": 199,
+                "srt": 199
+              },
+              {
+                "input": "part-07",
+                "regions": 151,
+                "nonempty": 149,
+                "txt": 149,
+                "srt": 149
+              },
+              {
+                "input": "part-08",
+                "regions": 152,
+                "nonempty": 151,
+                "txt": 151,
+                "srt": 151
+              },
+              {
+                "input": "part-09",
+                "regions": 319,
+                "nonempty": 319,
+                "txt": 319,
+                "srt": 319
+              },
+              {
+                "input": "part-10",
+                "regions": 227,
+                "nonempty": 227,
+                "txt": 227,
+                "srt": 227
+              },
+              {
+                "input": "part-11",
+                "regions": 266,
+                "nonempty": 266,
+                "txt": 266,
+                "srt": 266
+              },
+              {
+                "input": "part-12",
+                "regions": 189,
+                "nonempty": 189,
+                "txt": 189,
+                "srt": 189
+              },
+              {
+                "input": "part-13",
+                "regions": 344,
+                "nonempty": 344,
+                "txt": 344,
+                "srt": 344
+              },
+              {
+                "input": "part-14",
+                "regions": 265,
+                "nonempty": 265,
+                "txt": 265,
+                "srt": 265
+              },
+              {
+                "input": "part-15",
+                "regions": 200,
+                "nonempty": 199,
+                "txt": 199,
+                "srt": 199
+              },
+              {
+                "input": "part-16",
+                "regions": 244,
+                "nonempty": 244,
+                "txt": 244,
+                "srt": 244
+              },
+              {
+                "input": "full-transcript",
+                "regions": 3806,
+                "nonempty": 3800,
+                "txt": 3800,
+                "srt": 3800
+              }
+            ],
+            "errors": []
+          }
+        },
+        "chapter_group_partition": {
+          "passed": true,
+          "details": {
+            "chapters": 33,
+            "groups": 157,
+            "coverage_samples": 459237717,
+            "source_samples": 459237717,
+            "cross_chapter_regions": 0,
+            "cross_group_regions": 0
+          }
+        },
+        "region_gap_accounting": {
+          "passed": true,
+          "details": {
+            "regions": 3806,
+            "nonempty": 3800,
+            "empty": [
+              "D3-P06-R0097",
+              "D3-P06-R0110",
+              "D3-P07-R0075",
+              "D3-P07-R0092",
+              "D3-P08-R0070",
+              "D3-P15-R0183"
+            ],
+            "gaps": 3797,
+            "gap_seconds": 4642.7133125,
+            "dispositions": {
+              "explicit_low_information_interval": 299,
+              "nonempty_ASR_grouped_paraphrase_or_logged_editorial_omission": 3480,
+              "label_like_candidate": 21,
+              "empty_ASR": 6
+            },
+            "limitation": "Routing is not proof of semantic completeness or recognition recall"
+          }
+        },
+        "local_Markdown_structure": {
+          "passed": true,
+          "details": {
+            "files": 40,
+            "checks": [
+              "one H1",
+              "heading progression",
+              "trailing whitespace",
+              "tabs",
+              "ASCII punctuation",
+              "single final newline",
+              "fenced-code closure and language",
+              "table separators"
+            ],
+            "errors": [],
+            "markdownlint_available": false,
+            "limitation": "Fallback checks, not the full markdownlint rule set; no network install or hooks"
+          }
+        },
+        "local_links": {
+          "passed": true,
+          "details": {
+            "relative_links": 340,
+            "anchors": 48,
+            "broken": [],
+            "method": "Second pass after validation report creation; all local targets and Markdown fragments checked"
+          }
+        },
+        "privacy_pattern_scan": {
+          "passed": true,
+          "details": {
+            "files": 40,
+            "patterns": [
+              "email_address",
+              "phone_number",
+              "credential_prefix",
+              "signed_URL",
+              "JWT"
+            ],
+            "findings": [],
+            "limitation": "Heuristic only; manual editorial review also omitted handles, contacts, private links and secrets; does not establish rights or complete privacy"
+          }
+        },
+        "entity_ID_coverage": {
+          "passed": true,
+          "details": {
+            "used_ids": 59,
+            "missing": [],
+            "limitation": "Presence only, not correctness of identity or attribution"
+          }
+        },
+        "chapter_evidence_structure": {
+          "passed": true,
+          "details": {
+            "chapters": 33,
+            "checked": [
+              "draft label",
+              "source interval",
+              "part interval/hash references",
+              "editorial limits"
+            ]
+          }
+        },
+        "JSON_parse": {
+          "passed": true,
+          "details": {
+            "inputs": [
+              "input-inventory.json",
+              "coverage-ledger.json"
+            ]
+          }
+        },
+        "post_report_artifact_integrity": {
+          "passed": true,
+          "details": {
+            "artifacts": 42,
+            "mismatches": []
+          }
+        },
+        "quotation_marker_scan": {
+          "passed": true,
+          "details": {
+            "findings": [],
+            "method": "Markdown blockquote and double-quotation markers; heuristic plus manual nonverbatim editorial method"
+          }
+        }
+      },
+      "failed_checks": [],
+      "artifacts_excluding_this_report": {
+        "README.md": {
+          "bytes": 3432,
+          "sha256": "a5d14351d990e4ec4103ac5899eb066fa417a0cc7ba6278804496141c167d632"
+        },
+        "coverage-ledger.json": {
+          "bytes": 2691055,
+          "sha256": "e8e7261caa90e6a8facfbe7656b691f57f289bbc0ed20dffd02fd1ebcc567da2"
+        },
+        "editorial-change-log.md": {
+          "bytes": 6143,
+          "sha256": "5bd02b0ff35c0892c777f47da43e360fee368a84f5215aaacd907ea2b78b5e45"
+        },
+        "entities.md": {
+          "bytes": 16454,
+          "sha256": "43b182535994af2248e8e77c7dcca8ff674bf3fd8b88d275ee996ed0a297b3b5"
+        },
+        "gap-ledger.md": {
+          "bytes": 4977,
+          "sha256": "46bfa340eeef2fa609bf27da83904b212781f884e80121859898c1edb29315bf"
+        },
+        "input-inventory.json": {
+          "bytes": 20196,
+          "sha256": "ce45ea4d00ce6be13597ec9884799eea1bcac05b31c263a881649f93733dce7c"
+        },
+        "review-queue.md": {
+          "bytes": 8751,
+          "sha256": "890614e5961c421dca36e195ee40cc9c709506290332fb5a49bae46903b9560a"
+        },
+        "sources.md": {
+          "bytes": 7168,
+          "sha256": "81c2d8207403aac05200ce05567442e1f86a7f57029104be59e0caa1a17206f1"
+        },
+        "transcripts/01-opening-and-overnight-rework.md": {
+          "bytes": 7345,
+          "sha256": "b16568b3033bcdd1806cd9ce9d892ec02899a12f902fa7d39c158ae1533740b1"
+        },
+        "transcripts/02-revops-task-routing.md": {
+          "bytes": 4290,
+          "sha256": "f1a3d9396c69c2deeee885439af98ae4ad606db95e36e7c4dbed70250f20ecd3"
+        },
+        "transcripts/03-lead-review-app-and-guardrails.md": {
+          "bytes": 5071,
+          "sha256": "ac37c8312a79313b69c765dfe509cbdfdf1afb9b22cd911eda1bd442f542940d"
+        },
+        "transcripts/04-revops-questions-and-transition.md": {
+          "bytes": 4804,
+          "sha256": "82b4be20c6b72827fe1ceabdd503923320f764a8c2176c6f904a7c6b74062b3a"
+        },
+        "transcripts/05-production-setup-and-launch-checklist.md": {
+          "bytes": 4930,
+          "sha256": "85320872d1070bf015e83be194d67bf4a80a57067db22cf2eaddd6bbebf22b28"
+        },
+        "transcripts/06-practice-match-and-playtest-release.md": {
+          "bytes": 5162,
+          "sha256": "b949fc0e52134dd763c356f2110a4826ab5dd082fe14eccb318ef692d305a093"
+        },
+        "transcripts/07-launch-metrics-and-matchmaking-doubts.md": {
+          "bytes": 5571,
+          "sha256": "76703ac9e0ad2020e679765a783ec3b9489a375dea1c4d0c93f60a7821d94dd1"
+        },
+        "transcripts/08-feedback-intake-and-first-bug-triage.md": {
+          "bytes": 5946,
+          "sha256": "1e279f1ef97b49b7b6db55476bacb12954eeb3e19935284384a813f961242d43"
+        },
+        "transcripts/09-expanding-the-repair-loop.md": {
+          "bytes": 4364,
+          "sha256": "92d4d4d8c2e2cd6c9ab3bdf309c6b25d00977654d571ad1d1ab5ded9f7e8c6fc"
+        },
+        "transcripts/10-enterprise-video-and-break.md": {
+          "bytes": 2925,
+          "sha256": "49c0d3d29ec132df66bf479fcc96dc1fb13684c258108badce2a7cbfa080e978"
+        },
+        "transcripts/11-vincent-growth-ideas.md": {
+          "bytes": 5935,
+          "sha256": "ed25bb0d15714f5864b62145e8e2032d44ead7b336d9140aad92c6bd173ab2eb"
+        },
+        "transcripts/12-vincent-bot-onboarding-and-promotions.md": {
+          "bytes": 3596,
+          "sha256": "b4cc967f6c0971469e72486ba767f4eda3a715bb1a6ea108f2ee61431f917972"
+        },
+        "transcripts/13-marketing-ops-guest-and-cerebro.md": {
+          "bytes": 4142,
+          "sha256": "8d9cff53d3cf3ae43e192c1abecc2aa8596b85b42cab6c60b203c92fdf3c9661"
+        },
+        "transcripts/14-advertiser-personas-and-unconnected-prospecting.md": {
+          "bytes": 5548,
+          "sha256": "ff211882259f905867b467ff19aadf327ad9f9c778e6f788a2aa211abb8dd09c"
+        },
+        "transcripts/15-post-sales-team-and-meeting-demo.md": {
+          "bytes": 4497,
+          "sha256": "2fa2e99d75a398685c37acb0700535d05469d30d77669c6330378a1954132677"
+        },
+        "transcripts/16-post-sales-drafts-forms-and-staff-meeting.md": {
+          "bytes": 5104,
+          "sha256": "5690e4b93eeef94dc8b32091a3eb7fcdc29dbfb0185ff8048f5a6c74b00e1542"
+        },
+        "transcripts/17-post-sales-setup-cost-and-human-work.md": {
+          "bytes": 5446,
+          "sha256": "ad09f523a3418de068001515601516ed3d22b8aa01a11836139c244ae1a278f5"
+        },
+        "transcripts/18-post-sales-verification-and-migration-questions.md": {
+          "bytes": 5856,
+          "sha256": "52292f76b9c050a61b4302469444842cf66112348c31a991e32fdf36c45c04d9"
+        },
+        "transcripts/19-launch-data-and-mobile-playthrough.md": {
+          "bytes": 5872,
+          "sha256": "b3d15d85f830d10da0431e06bc87ca6dc6e6d49e80b985430abe09b7537126d2"
+        },
+        "transcripts/20-phone-feedback-and-secret-handling.md": {
+          "bytes": 4297,
+          "sha256": "0369145d1c637769a8d637db7e8ff3cca818c5c96771b52b20536ec2d87ffb54"
+        },
+        "transcripts/21-analytics-templates-and-ui-delivery.md": {
+          "bytes": 5520,
+          "sha256": "fc6f4508344a0bc30fcd3dd873e88308b21d97c2758938118bef9f230b1fceaf"
+        },
+        "transcripts/22-recap-stripe-link-and-sponsored-cards.md": {
+          "bytes": 4781,
+          "sha256": "95c14ef053267a4b75737b083ffd545991ae5f25e81f84f394a06f2f10ce3e12"
+        },
+        "transcripts/23-voice-subscriptions-and-first-dollar-goal.md": {
+          "bytes": 3859,
+          "sha256": "322b94aa0cd1c1209abf91550f7f6fc80415f41081ff7a5c621a7f3b2687f197"
+        },
+        "transcripts/24-link-demo-limits-and-personal-use-cases.md": {
+          "bytes": 3753,
+          "sha256": "2878504239021988dd53208a7c0351182c376501f8a003e8770ffb0e22109c64"
+        },
+        "transcripts/25-marketing-workshop-research-and-positioning.md": {
+          "bytes": 5177,
+          "sha256": "e9552f676b0ed838f57b313335e3f4e467ca9120efd5f197fae0dfec3109c29d"
+        },
+        "transcripts/26-marketing-campaign-build-and-automation.md": {
+          "bytes": 4879,
+          "sha256": "ec163b291446e0581cb9344c76501b831a6f0d1c92394d3250b2a9033326ac68"
+        },
+        "transcripts/27-marketing-questions-and-permission-limits.md": {
+          "bytes": 5393,
+          "sha256": "42c41ff67e1e0f2438622723bd38c054bd251848798a5e80262e241a6ec9159a"
+        },
+        "transcripts/28-eric-joins-voice-prs-and-sharing.md": {
+          "bytes": 4652,
+          "sha256": "61d57256872127509fd94b66b47719b4ee969c4ea5bc48491976092446fa9be7"
+        },
+        "transcripts/29-engineering-rigor-and-new-game-bugs.md": {
+          "bytes": 5724,
+          "sha256": "b26e22996d66744743a51ef5cdcc2d8c6c66a34cebbda34e454a90cbd07753f5"
+        },
+        "transcripts/30-broken-ad-auction-and-feedback-projects.md": {
+          "bytes": 4790,
+          "sha256": "53ef94e2ed90e25c9c00fd7873e994072af6b9883bafa615663dfd5820b5495d"
+        },
+        "transcripts/31-final-build-check-in-and-unfinished-ads.md": {
+          "bytes": 5314,
+          "sha256": "ce443302c597c6b39ffd9372d5fa08574be7fa0b8c01662cc96e6558dd7fa4aa"
+        },
+        "transcripts/32-host-reflections-on-distribution-and-restraint.md": {
+          "bytes": 4485,
+          "sha256": "5ed141e15cb9d15282dc94cfe493d9592f6724f55406115889e6ae2de86c1b91"
+        },
+        "transcripts/33-closing-metrics-outage-and-failed-sponsorship-test.md": {
+          "bytes": 5315,
+          "sha256": "78d8ce52a5fcc2ceb5b3d38a6e486d80eec02b8565796990243c3996a307e060"
+        },
+        "transcripts/README.md": {
+          "bytes": 14021,
+          "sha256": "bbd23fe2b5d0c4d33563fe69de53b3c0882cdcfa6ac3e5a7b5355080595b5c6d"
+        }
+      }
+    },
+    {
+      "checked_utc": "2026-09-24T13:02:30.875199+00:00",
+      "result": "Localized reviewer repair and fresh structural validation against original raw baseline; no rebaseline",
+      "changed_non_report_artifacts": [
+        "README.md",
+        "editorial-change-log.md",
+        "sources.md",
+        "transcripts/01-opening-and-overnight-rework.md",
+        "transcripts/06-practice-match-and-playtest-release.md"
+      ],
+      "failed_checks": [],
+      "audio_review": "not performed; required skill gate remains unmet"
+    },
+    {
+      "result": "Exact pre-save-preflight report snapshot; prior timestamps/results/failed attempts retained, not represented as rerun",
+      "snapshot": {
+        "schema_version": 1,
+        "checked_utc": "2026-09-24T13:02:30.875199+00:00",
+        "status": "structural_pass_ASR_draft_audio_gates_unmet",
+        "scope": "This curation repair pass writes docs/days/day-03/** only; raw and all other paths read-only; no network, Git, caption inputs or synthesis; concurrent parent global-status/navigation writes are separate and expected",
+        "checks": {
+          "raw_baseline_integrity": {
+            "passed": true,
+            "details": {
+              "baseline_captured_utc": "2026-09-24T12:33:53.160607+00:00",
+              "baseline_files": 96,
+              "current_files": 96,
+              "bytes": 1165816222,
+              "added": [],
+              "missing": [],
+              "changed": [],
+              "method": "Fresh read-only SHA-256, size, symlink flag and full file-set comparison against original baseline; no rebaseline"
+            }
+          },
+          "ASR_export_manifest_hashes": {
+            "passed": true,
+            "details": {
+              "exports": 51,
+              "mismatches": []
+            }
+          },
+          "WAV_PCM_identity": {
+            "passed": true,
+            "details": {
+              "parts": 16,
+              "samples": 459237717,
+              "duration_seconds": 28702.3573125,
+              "pcm_sha256": "e99f1541358af21cbef3ce270540a2e07d1c660531b5c1921da309f7423245d7",
+              "bad_parts": [],
+              "method": "Fresh WAV metadata/file hashes and concatenated payload SHA-256; no new decode/listening"
+            }
+          },
+          "source_M4A_hash": {
+            "passed": true,
+            "details": {
+              "sha256": "f121e311238c48e0b6cc44ddc52726cbbd0b4bfa0fa6705c849b1c57ef56a558"
+            }
+          },
+          "combined_JSON_offsets": {
+            "passed": true,
+            "details": {
+              "regions": 3806,
+              "method": "Exact part JSON text and float local-plus-offset comparison"
+            }
+          },
+          "TXT_SRT_JSON_consistency": {
+            "passed": true,
+            "details": {
+              "method": "All nonempty texts/order equal JSON; timestamp tolerance 1.001 ms; sequential SRT IDs",
+              "inputs": [
+                {
+                  "input": "part-01",
+                  "regions": 207,
+                  "nonempty": 207,
+                  "txt": 207,
+                  "srt": 207
+                },
+                {
+                  "input": "part-02",
+                  "regions": 288,
+                  "nonempty": 288,
+                  "txt": 288,
+                  "srt": 288
+                },
+                {
+                  "input": "part-03",
+                  "regions": 218,
+                  "nonempty": 218,
+                  "txt": 218,
+                  "srt": 218
+                },
+                {
+                  "input": "part-04",
+                  "regions": 247,
+                  "nonempty": 247,
+                  "txt": 247,
+                  "srt": 247
+                },
+                {
+                  "input": "part-05",
+                  "regions": 288,
+                  "nonempty": 288,
+                  "txt": 288,
+                  "srt": 288
+                },
+                {
+                  "input": "part-06",
+                  "regions": 201,
+                  "nonempty": 199,
+                  "txt": 199,
+                  "srt": 199
+                },
+                {
+                  "input": "part-07",
+                  "regions": 151,
+                  "nonempty": 149,
+                  "txt": 149,
+                  "srt": 149
+                },
+                {
+                  "input": "part-08",
+                  "regions": 152,
+                  "nonempty": 151,
+                  "txt": 151,
+                  "srt": 151
+                },
+                {
+                  "input": "part-09",
+                  "regions": 319,
+                  "nonempty": 319,
+                  "txt": 319,
+                  "srt": 319
+                },
+                {
+                  "input": "part-10",
+                  "regions": 227,
+                  "nonempty": 227,
+                  "txt": 227,
+                  "srt": 227
+                },
+                {
+                  "input": "part-11",
+                  "regions": 266,
+                  "nonempty": 266,
+                  "txt": 266,
+                  "srt": 266
+                },
+                {
+                  "input": "part-12",
+                  "regions": 189,
+                  "nonempty": 189,
+                  "txt": 189,
+                  "srt": 189
+                },
+                {
+                  "input": "part-13",
+                  "regions": 344,
+                  "nonempty": 344,
+                  "txt": 344,
+                  "srt": 344
+                },
+                {
+                  "input": "part-14",
+                  "regions": 265,
+                  "nonempty": 265,
+                  "txt": 265,
+                  "srt": 265
+                },
+                {
+                  "input": "part-15",
+                  "regions": 200,
+                  "nonempty": 199,
+                  "txt": 199,
+                  "srt": 199
+                },
+                {
+                  "input": "part-16",
+                  "regions": 244,
+                  "nonempty": 244,
+                  "txt": 244,
+                  "srt": 244
+                },
+                {
+                  "input": "full-transcript",
+                  "regions": 3806,
+                  "nonempty": 3800,
+                  "txt": 3800,
+                  "srt": 3800
+                }
+              ],
+              "errors": []
+            }
+          },
+          "chapter_group_partition": {
+            "passed": true,
+            "details": {
+              "chapters": 33,
+              "groups": 157,
+              "coverage_samples": 459237717,
+              "source_samples": 459237717,
+              "errors": []
+            }
+          },
+          "region_gap_accounting": {
+            "passed": true,
+            "details": {
+              "regions": 3806,
+              "nonempty": 3800,
+              "empty": [
+                "D3-P06-R0097",
+                "D3-P06-R0110",
+                "D3-P07-R0075",
+                "D3-P07-R0092",
+                "D3-P08-R0070",
+                "D3-P15-R0183"
+              ],
+              "gaps": 3797,
+              "gap_seconds": 4642.7133125,
+              "cross_chapter_regions": 0,
+              "cross_group_regions": 0,
+              "dispositions": {
+                "explicit_low_information_interval": 299,
+                "nonempty_ASR_grouped_paraphrase_or_logged_editorial_omission": 3480,
+                "label_like_candidate": 21,
+                "empty_ASR": 6
+              },
+              "errors": [],
+              "limitation": "Routing is not proof of semantic completeness or recognition recall"
+            }
+          },
+          "local_Markdown_structure": {
+            "passed": true,
+            "details": {
+              "files": 40,
+              "checks": [
+                "one H1",
+                "heading progression",
+                "trailing whitespace",
+                "tabs",
+                "ASCII punctuation",
+                "single final newline",
+                "fenced-code closure and language",
+                "table separators"
+              ],
+              "errors": [],
+              "markdownlint_available": false,
+              "limitation": "Local fallback checks, not full markdownlint; no install or hooks"
+            }
+          },
+          "local_links": {
+            "passed": true,
+            "details": {
+              "relative_links": 340,
+              "anchors": 48,
+              "broken": [],
+              "method": "Fresh local target and heading-fragment resolution; no network"
+            }
+          },
+          "privacy_pattern_scan": {
+            "passed": true,
+            "details": {
+              "files": 40,
+              "patterns": [
+                "email_address",
+                "phone_number",
+                "credential_prefix",
+                "signed_URL",
+                "JWT"
+              ],
+              "findings": [],
+              "limitation": "Heuristic only; not proof of complete privacy or redistribution rights; no matched values output"
+            }
+          },
+          "entity_ID_coverage": {
+            "passed": true,
+            "details": {
+              "used_ids": 58,
+              "missing": [],
+              "limitation": "Presence only, not correctness of attribution"
+            }
+          },
+          "chapter_evidence_structure": {
+            "passed": true,
+            "details": {
+              "chapters": 33,
+              "checked": [
+                "draft label",
+                "source interval",
+                "part interval/hash references",
+                "editorial limits"
+              ],
+              "errors": []
+            }
+          },
+          "JSON_parse": {
+            "passed": true,
+            "details": {
+              "inputs": [
+                "coverage-ledger.json",
+                "input-inventory.json",
+                "validation.json"
+              ]
+            }
+          },
+          "quotation_marker_scan": {
+            "passed": true,
+            "details": {
+              "findings": [],
+              "method": "Markdown blockquote and double-quotation markers; heuristic, not listening"
+            }
+          },
+          "localized_change_scope": {
+            "passed": true,
+            "details": {
+              "changed_non_report_artifacts": [
+                "README.md",
+                "editorial-change-log.md",
+                "sources.md",
+                "transcripts/01-opening-and-overnight-rework.md",
+                "transcripts/06-practice-match-and-playtest-release.md"
+              ],
+              "unchanged_non_report_artifacts": 37,
+              "baseline_inventory_unchanged": true,
+              "coverage_ledger_unchanged": true
+            }
+          },
+          "reviewer_corrections": {
+            "passed": true,
+            "details": {
+              "C01_source_seconds": [
+                1483.16,
+                1517.628
+              ],
+              "C06_source_seconds": [
+                6378.392,
+                6400.956
+              ],
+              "C06_group": "D3-C06-G05",
+              "basis": "Exact ASR passages read; not audio-verified"
+            }
+          },
+          "post_report_artifact_integrity": {
+            "passed": true,
+            "details": {
+              "artifacts": 42,
+              "mismatches": [],
+              "method": "Fresh reread/hash of every non-report artifact after report creation; report excluded to avoid self-hash recursion"
+            }
+          }
+        },
+        "failed_checks": [],
+        "acceptance": {
+          "full_ASR_text_read": "Prior curation read all 16 parts in full across its session/checkpoint; repair reread only the two exact raw passages; all exports structurally revalidated",
+          "audio_review": "not performed; required skill gate unmet",
+          "quotations": "none audio-verified; derivative uses paraphrase",
+          "semantic_completeness": "editorial intent and explicit omission ledger, not mechanically certified",
+          "external_outcomes": "not independently verified",
+          "redistribution_rights": "unestablished",
+          "event_synthesis": "not run"
+        },
+        "artifacts_excluding_this_report": {
+          "README.md": {
+            "bytes": 3536,
+            "sha256": "a6df948a64bf25bd99e6134f0022d60de9cb074e79412ce5cd51337e10565a6c"
+          },
+          "coverage-ledger.json": {
+            "bytes": 2691055,
+            "sha256": "e8e7261caa90e6a8facfbe7656b691f57f289bbc0ed20dffd02fd1ebcc567da2"
+          },
+          "editorial-change-log.md": {
+            "bytes": 7273,
+            "sha256": "dc7b464d92cb2643a0da24746318196561a9fa63dbb66749d5946f011dbf18e2"
+          },
+          "entities.md": {
+            "bytes": 16454,
+            "sha256": "43b182535994af2248e8e77c7dcca8ff674bf3fd8b88d275ee996ed0a297b3b5"
+          },
+          "gap-ledger.md": {
+            "bytes": 4977,
+            "sha256": "46bfa340eeef2fa609bf27da83904b212781f884e80121859898c1edb29315bf"
+          },
+          "input-inventory.json": {
+            "bytes": 20196,
+            "sha256": "ce45ea4d00ce6be13597ec9884799eea1bcac05b31c263a881649f93733dce7c"
+          },
+          "review-queue.md": {
+            "bytes": 8751,
+            "sha256": "890614e5961c421dca36e195ee40cc9c709506290332fb5a49bae46903b9560a"
+          },
+          "sources.md": {
+            "bytes": 7249,
+            "sha256": "e6bf67f7df0139f982f015770e415e0b4eaee3f64bd4c32d56b1c655b2586a14"
+          },
+          "transcripts/01-opening-and-overnight-rework.md": {
+            "bytes": 7331,
+            "sha256": "81249126e4ec05bd0559a7f18be96d43767c121a082760aacabdfe21c243e6c0"
+          },
+          "transcripts/02-revops-task-routing.md": {
+            "bytes": 4290,
+            "sha256": "f1a3d9396c69c2deeee885439af98ae4ad606db95e36e7c4dbed70250f20ecd3"
+          },
+          "transcripts/03-lead-review-app-and-guardrails.md": {
+            "bytes": 5071,
+            "sha256": "ac37c8312a79313b69c765dfe509cbdfdf1afb9b22cd911eda1bd442f542940d"
+          },
+          "transcripts/04-revops-questions-and-transition.md": {
+            "bytes": 4804,
+            "sha256": "82b4be20c6b72827fe1ceabdd503923320f764a8c2176c6f904a7c6b74062b3a"
+          },
+          "transcripts/05-production-setup-and-launch-checklist.md": {
+            "bytes": 4930,
+            "sha256": "85320872d1070bf015e83be194d67bf4a80a57067db22cf2eaddd6bbebf22b28"
+          },
+          "transcripts/06-practice-match-and-playtest-release.md": {
+            "bytes": 5187,
+            "sha256": "b0e9f843409ae8582b4533a4489a8d555c36f08e9276f0f269eb38d21f40be05"
+          },
+          "transcripts/07-launch-metrics-and-matchmaking-doubts.md": {
+            "bytes": 5571,
+            "sha256": "76703ac9e0ad2020e679765a783ec3b9489a375dea1c4d0c93f60a7821d94dd1"
+          },
+          "transcripts/08-feedback-intake-and-first-bug-triage.md": {
+            "bytes": 5946,
+            "sha256": "1e279f1ef97b49b7b6db55476bacb12954eeb3e19935284384a813f961242d43"
+          },
+          "transcripts/09-expanding-the-repair-loop.md": {
+            "bytes": 4364,
+            "sha256": "92d4d4d8c2e2cd6c9ab3bdf309c6b25d00977654d571ad1d1ab5ded9f7e8c6fc"
+          },
+          "transcripts/10-enterprise-video-and-break.md": {
+            "bytes": 2925,
+            "sha256": "49c0d3d29ec132df66bf479fcc96dc1fb13684c258108badce2a7cbfa080e978"
+          },
+          "transcripts/11-vincent-growth-ideas.md": {
+            "bytes": 5935,
+            "sha256": "ed25bb0d15714f5864b62145e8e2032d44ead7b336d9140aad92c6bd173ab2eb"
+          },
+          "transcripts/12-vincent-bot-onboarding-and-promotions.md": {
+            "bytes": 3596,
+            "sha256": "b4cc967f6c0971469e72486ba767f4eda3a715bb1a6ea108f2ee61431f917972"
+          },
+          "transcripts/13-marketing-ops-guest-and-cerebro.md": {
+            "bytes": 4142,
+            "sha256": "8d9cff53d3cf3ae43e192c1abecc2aa8596b85b42cab6c60b203c92fdf3c9661"
+          },
+          "transcripts/14-advertiser-personas-and-unconnected-prospecting.md": {
+            "bytes": 5548,
+            "sha256": "ff211882259f905867b467ff19aadf327ad9f9c778e6f788a2aa211abb8dd09c"
+          },
+          "transcripts/15-post-sales-team-and-meeting-demo.md": {
+            "bytes": 4497,
+            "sha256": "2fa2e99d75a398685c37acb0700535d05469d30d77669c6330378a1954132677"
+          },
+          "transcripts/16-post-sales-drafts-forms-and-staff-meeting.md": {
+            "bytes": 5104,
+            "sha256": "5690e4b93eeef94dc8b32091a3eb7fcdc29dbfb0185ff8048f5a6c74b00e1542"
+          },
+          "transcripts/17-post-sales-setup-cost-and-human-work.md": {
+            "bytes": 5446,
+            "sha256": "ad09f523a3418de068001515601516ed3d22b8aa01a11836139c244ae1a278f5"
+          },
+          "transcripts/18-post-sales-verification-and-migration-questions.md": {
+            "bytes": 5856,
+            "sha256": "52292f76b9c050a61b4302469444842cf66112348c31a991e32fdf36c45c04d9"
+          },
+          "transcripts/19-launch-data-and-mobile-playthrough.md": {
+            "bytes": 5872,
+            "sha256": "b3d15d85f830d10da0431e06bc87ca6dc6e6d49e80b985430abe09b7537126d2"
+          },
+          "transcripts/20-phone-feedback-and-secret-handling.md": {
+            "bytes": 4297,
+            "sha256": "0369145d1c637769a8d637db7e8ff3cca818c5c96771b52b20536ec2d87ffb54"
+          },
+          "transcripts/21-analytics-templates-and-ui-delivery.md": {
+            "bytes": 5520,
+            "sha256": "fc6f4508344a0bc30fcd3dd873e88308b21d97c2758938118bef9f230b1fceaf"
+          },
+          "transcripts/22-recap-stripe-link-and-sponsored-cards.md": {
+            "bytes": 4781,
+            "sha256": "95c14ef053267a4b75737b083ffd545991ae5f25e81f84f394a06f2f10ce3e12"
+          },
+          "transcripts/23-voice-subscriptions-and-first-dollar-goal.md": {
+            "bytes": 3859,
+            "sha256": "322b94aa0cd1c1209abf91550f7f6fc80415f41081ff7a5c621a7f3b2687f197"
+          },
+          "transcripts/24-link-demo-limits-and-personal-use-cases.md": {
+            "bytes": 3753,
+            "sha256": "2878504239021988dd53208a7c0351182c376501f8a003e8770ffb0e22109c64"
+          },
+          "transcripts/25-marketing-workshop-research-and-positioning.md": {
+            "bytes": 5177,
+            "sha256": "e9552f676b0ed838f57b313335e3f4e467ca9120efd5f197fae0dfec3109c29d"
+          },
+          "transcripts/26-marketing-campaign-build-and-automation.md": {
+            "bytes": 4879,
+            "sha256": "ec163b291446e0581cb9344c76501b831a6f0d1c92394d3250b2a9033326ac68"
+          },
+          "transcripts/27-marketing-questions-and-permission-limits.md": {
+            "bytes": 5393,
+            "sha256": "42c41ff67e1e0f2438622723bd38c054bd251848798a5e80262e241a6ec9159a"
+          },
+          "transcripts/28-eric-joins-voice-prs-and-sharing.md": {
+            "bytes": 4652,
+            "sha256": "61d57256872127509fd94b66b47719b4ee969c4ea5bc48491976092446fa9be7"
+          },
+          "transcripts/29-engineering-rigor-and-new-game-bugs.md": {
+            "bytes": 5724,
+            "sha256": "b26e22996d66744743a51ef5cdcc2d8c6c66a34cebbda34e454a90cbd07753f5"
+          },
+          "transcripts/30-broken-ad-auction-and-feedback-projects.md": {
+            "bytes": 4790,
+            "sha256": "53ef94e2ed90e25c9c00fd7873e994072af6b9883bafa615663dfd5820b5495d"
+          },
+          "transcripts/31-final-build-check-in-and-unfinished-ads.md": {
+            "bytes": 5314,
+            "sha256": "ce443302c597c6b39ffd9372d5fa08574be7fa0b8c01662cc96e6558dd7fa4aa"
+          },
+          "transcripts/32-host-reflections-on-distribution-and-restraint.md": {
+            "bytes": 4485,
+            "sha256": "5ed141e15cb9d15282dc94cfe493d9592f6724f55406115889e6ae2de86c1b91"
+          },
+          "transcripts/33-closing-metrics-outage-and-failed-sponsorship-test.md": {
+            "bytes": 5315,
+            "sha256": "78d8ce52a5fcc2ceb5b3d38a6e486d80eec02b8565796990243c3996a307e060"
+          },
+          "transcripts/README.md": {
+            "bytes": 14021,
+            "sha256": "bbd23fe2b5d0c4d33563fe69de53b3c0882cdcfa6ac3e5a7b5355080595b5c6d"
+          }
+        },
+        "output_counts": {
+          "chapters": 33,
+          "Markdown": 40,
+          "files_including_this_report": 43
+        },
+        "method": "Bounded local Python standard-library checks via terminal; no raw mutation, no ffmpeg decode rerun, no markdownlint install"
+      }
+    }
+  ],
+  "save_preflight": {
+    "started_utc": "2026-09-24T14:42:16.177476+00:00",
+    "completed_utc": "2026-09-24T14:45:29.495773+00:00",
+    "final_pass_started_utc": "2026-09-24T14:45:25.422254+00:00",
+    "final_pass_elapsed_seconds": 4.073536,
+    "status": "save_preflight_structural_integrity_pass_audio_review_pending",
+    "reused_raw_validation": {
+      "original_checked_utc": "2026-09-24T13:02:30.875199+00:00",
+      "basis": "Full original raw baseline inventories and exports match current bytes; baseline inventory and coverage ledger themselves match prior report fingerprints. Reuse is limited to exact historical raw results listed here; historical validator code, decodes and listening were not rerun.",
+      "results": {
+        "WAV_PCM_identity": {
+          "passed": true,
+          "details": {
+            "parts": 16,
+            "samples": 459237717,
+            "duration_seconds": 28702.3573125,
+            "pcm_sha256": "e99f1541358af21cbef3ce270540a2e07d1c660531b5c1921da309f7423245d7",
+            "bad_parts": [],
+            "method": "Fresh WAV metadata/file hashes and concatenated payload SHA-256; no new decode/listening"
+          }
+        },
+        "source_M4A_hash": {
+          "passed": true,
+          "details": {
+            "sha256": "f121e311238c48e0b6cc44ddc52726cbbd0b4bfa0fa6705c849b1c57ef56a558"
+          }
+        },
+        "combined_JSON_offsets": {
+          "passed": true,
+          "details": {
+            "regions": 3806,
+            "method": "Exact part JSON text and float local-plus-offset comparison"
+          }
+        },
+        "TXT_SRT_JSON_consistency": {
+          "passed": true,
+          "details": {
+            "method": "All nonempty texts/order equal JSON; timestamp tolerance 1.001 ms; sequential SRT IDs",
+            "inputs": [
+              {
+                "input": "part-01",
+                "regions": 207,
+                "nonempty": 207,
+                "txt": 207,
+                "srt": 207
+              },
+              {
+                "input": "part-02",
+                "regions": 288,
+                "nonempty": 288,
+                "txt": 288,
+                "srt": 288
+              },
+              {
+                "input": "part-03",
+                "regions": 218,
+                "nonempty": 218,
+                "txt": 218,
+                "srt": 218
+              },
+              {
+                "input": "part-04",
+                "regions": 247,
+                "nonempty": 247,
+                "txt": 247,
+                "srt": 247
+              },
+              {
+                "input": "part-05",
+                "regions": 288,
+                "nonempty": 288,
+                "txt": 288,
+                "srt": 288
+              },
+              {
+                "input": "part-06",
+                "regions": 201,
+                "nonempty": 199,
+                "txt": 199,
+                "srt": 199
+              },
+              {
+                "input": "part-07",
+                "regions": 151,
+                "nonempty": 149,
+                "txt": 149,
+                "srt": 149
+              },
+              {
+                "input": "part-08",
+                "regions": 152,
+                "nonempty": 151,
+                "txt": 151,
+                "srt": 151
+              },
+              {
+                "input": "part-09",
+                "regions": 319,
+                "nonempty": 319,
+                "txt": 319,
+                "srt": 319
+              },
+              {
+                "input": "part-10",
+                "regions": 227,
+                "nonempty": 227,
+                "txt": 227,
+                "srt": 227
+              },
+              {
+                "input": "part-11",
+                "regions": 266,
+                "nonempty": 266,
+                "txt": 266,
+                "srt": 266
+              },
+              {
+                "input": "part-12",
+                "regions": 189,
+                "nonempty": 189,
+                "txt": 189,
+                "srt": 189
+              },
+              {
+                "input": "part-13",
+                "regions": 344,
+                "nonempty": 344,
+                "txt": 344,
+                "srt": 344
+              },
+              {
+                "input": "part-14",
+                "regions": 265,
+                "nonempty": 265,
+                "txt": 265,
+                "srt": 265
+              },
+              {
+                "input": "part-15",
+                "regions": 200,
+                "nonempty": 199,
+                "txt": 199,
+                "srt": 199
+              },
+              {
+                "input": "part-16",
+                "regions": 244,
+                "nonempty": 244,
+                "txt": 244,
+                "srt": 244
+              },
+              {
+                "input": "full-transcript",
+                "regions": 3806,
+                "nonempty": 3800,
+                "txt": 3800,
+                "srt": 3800
+              }
+            ],
+            "errors": []
+          }
+        }
+      }
+    },
+    "validation_attempts": [
+      {
+        "started_utc": "2026-09-24T14:42:16.177476+00:00",
+        "finished_utc": "2026-09-24T14:42:20.462182+00:00",
+        "result": "All routing checks passed except an erroneous signature comparison",
+        "validator_error": "Compared signature dict with model hash string",
+        "affected_parts": 16,
+        "raw_inputs_changed": false
+      },
+      {
+        "started_utc": "2026-09-24T14:43:25.325999+00:00",
+        "finished_utc": "2026-09-24T14:43:25.334727+00:00",
+        "result": "Corrected signature check passed",
+        "correction": "Compare exact model/audio_sha256 signature dict, complete flag and source offset",
+        "raw_inputs_changed": false
+      }
+    ],
+    "not_performed": [
+      "audio/video/screen playback",
+      "new full-day or full-caption semantic reading",
+      "semantic anchor rematching",
+      "M4A decode or WAV PCM payload computation",
+      "historical TXT/SRT/combined-export validator rerun (results reused on identical inputs)",
+      "external identity/product/outcome checks",
+      "event synthesis",
+      "markdownlint or dependency installation",
+      "Git/staging/gitleaks/publication"
+    ],
+    "remaining_blockers": [],
+    "readiness": "Day-local integrity/structure evidence only. Audio acceptance, semantic completeness, external outcomes and redistribution rights remain unverified. Parent owns whole-set Markdown/JSON checks and staged gitleaks."
+  }
+}

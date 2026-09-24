@@ -5,19 +5,30 @@ what they attempted, what they demonstrated, what they decided, and what other
 teams can learn. Requests, bot success reports, and verified outcomes are not
 interchangeable.
 
-Last reviewed: 2026-09-16 against the local runner, preparation CLI, and
-[Day 1 validation record](docs/days/day-01/sources.md).
+Day 1–3 curation status updated: 2026-09-24. The prerequisite
+and Day 1 preparation instructions below retain their 2026-09-16 validation
+baseline; see each day's source record for its own checks.
 
 ## Current state
 
-- Day 1 audio and local machine transcripts have been migrated into this repo.
-- The audio is about 8 hours 45 minutes, split into 17 exact half-hour PCM parts
-  and one 15-minute 12.567375-second remainder.
-- All 18 transcript checkpoints are structurally complete (2,977 speech
-  regions). This does not establish ASR accuracy or complete speech coverage.
-- No cleaned chapters or reviewed event synthesis have been authored yet.
-- Days 2 and 3 remain pending source acquisition and review. No outcomes are
-  inferred for either day.
+| | Day 1 | Day 2 | Day 3 |
+| --- | --- | --- | --- |
+| PCM duration / parts | 08:45:12.567 / 18 | 08:23:18.528 / 17 | 07:58:22.357 / 16 |
+| Local ASR regions (structurally validated) | 2,977 | 4,119 | 3,806 |
+| Curated chapters (ASR-based draft) | [32](docs/days/day-01/transcripts/README.md) | [26](docs/days/day-02/transcripts/README.md) | [33](docs/days/day-03/transcripts/README.md) |
+| Audio review / synthesis | Pending | Pending | Pending |
+
+Structural ASR completion does not establish accuracy or full speech coverage.
+Day 2/3 acquisition used yt-dlp HLS fragments; see the
+[extraction checkpoint](docs/reference/day-02-03-extraction-status.md).
+
+- Ten official YouTube sessions have local captions and full-text Markdown
+  derivatives under ignored `.data/youtube/`; content review remains separate
+  from structural validation. See the [session source record](docs/reference/youtube-sessions.md).
+- Full-day Day 2/3 audio, exact PCM chunks and raw transcripts passed structural
+  validation. See the [checkpoint](docs/reference/day-02-03-extraction-status.md)
+  for durations, local paths and limitations. Curation used full-day ASR, not
+  aligned YouTube captions; neither source establishes verified day outcomes.
 - Four repo-local skills capture ingest, transcription, curation, and synthesis.
   Governance's optional `baseline` adds 37 shared skills and two agent definitions;
   it is not a project dependency or permission to execute their workflows.
@@ -27,9 +38,39 @@ Last reviewed: 2026-09-16 against the local runner, preparation CLI, and
 - [Documentation index](docs/README.md)
 - [Complete planned knowledge-base layout](docs/reference/knowledge-base-layout.md)
 - [Day 1 source and validation record](docs/days/day-01/sources.md)
+- [Day 2 curation draft](docs/days/day-02/README.md)
+- [Day 3 curation draft](docs/days/day-03/README.md)
 - [Editorial method](docs/reference/editorial-method.md)
 - [Agent workspace and governance maintenance](docs/reference/agent-workspace.md)
 - [Roadmap](ROADMAP.md)
+
+## Understand the sessions and learn from them
+
+Two repo-owned skills provide the core workflow:
+
+| Skill | Question it answers | Output |
+| --- | --- | --- |
+| [`transcript-curate`](.agents/skills/transcript-curate/SKILL.md) | What happened, who was speaking, and what was requested, claimed, or shown? | Source-linked chapters, attribution notes, and coverage/review gaps |
+| [`event-synthesize`](.agents/skills/event-synthesize/SKILL.md) | What decisions, outcomes, lessons, and open questions does the reviewed evidence support? | Concise session reviews, then day-level and cross-session synthesis |
+
+Optional `file-review` checks factual support; `denoise` makes reviewed writing
+more concise. Ingest and transcription skills are only needed for new source
+material, not to reread the captions already available.
+
+Start with one session: review its chronological topics, check consequential
+claims against source playback, then write a nonverbatim review using the
+[session review template](docs/templates/session-review.md). Keep caption-only
+findings provisional. Full text stays in ignored `.data/`; authored reviews go
+under `docs/days/day-XX/sessions/`, with day and cross-session lessons built from
+those reviews. Do not create empty reports or infer events from missing sources.
+
+- [Detailed analysis workflow, skill map, and folder hierarchy](docs/reference/session-analysis.md)
+- [Session videos, local input locations, and timing caveats](docs/reference/youtube-sessions.md)
+- [Editorial and evidence rules](docs/reference/editorial-method.md)
+
+Analysis is a separate step from downloading or converting captions. Confirm
+permission for the actual model-hosting environment before sending it raw text;
+no skill implicitly authorizes that processing, publication, or Git operations.
 
 ## Local evidence and publication
 
@@ -50,8 +91,8 @@ five-minute command limit. Partial files are preserved under ignored
 See [audio storage and quality](docs/reference/audio-storage.md) for measurements,
 limitations, the tested preparation command, and remaining validation.
 
-No files have been staged, committed, or pushed. A request to version audio does
-not establish a license to redistribute a third-party broadcast. Record rights
+The interrupted audio preparation did not stage, commit or push media. A request
+to version audio does not establish a license to redistribute a third-party broadcast. Record rights
 and destination access before publication; check originals and derivatives for
 incidental private content.
 

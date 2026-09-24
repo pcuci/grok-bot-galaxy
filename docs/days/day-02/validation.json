@@ -1,0 +1,1121 @@
+{
+  "schema_version": 1,
+  "checked_utc": "2026-09-24T14:47:36.335412+00:00",
+  "status": "save_preflight_structural_integrity_pass_audio_review_pending",
+  "checks": {
+    "raw_baseline_integrity": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:47:31.174562+00:00",
+      "finished_utc": "2026-09-24T14:47:36.250544+00:00",
+      "elapsed_seconds": 5.075968,
+      "files": 90,
+      "bytes": 1384287830,
+      "comparison": {
+        "added": [],
+        "missing": [],
+        "changed": []
+      },
+      "baseline_inventory": {
+        "bytes": 14523,
+        "sha256": "7c54748a9f3061a0fe52449bea2f2b311592920fc651ee0681829242d181d44b"
+      },
+      "baseline_unchanged": true,
+      "method": "Fresh full file-set, byte-count and SHA-256 comparison against unchanged original Day 2 input-inventory.json; no rebaseline. Original baseline has no symlink flags."
+    },
+    "ASR_export_manifest_hashes": {
+      "passed": true,
+      "exports": 54,
+      "mismatches": [],
+      "manifest": {
+        "bytes": 25265,
+        "sha256": "e1c5915ce8782e3ece0ba2d4f8812aebf933af2a733f918fa3710a2a8f1d7af2"
+      },
+      "method": "Current raw hashes compared with original ASR manifest output_sha256 entries; no export regeneration.",
+      "checked_utc": "2026-09-24T14:47:36.250570+00:00"
+    },
+    "coverage_group_routing": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:42:10.960495+00:00",
+      "finished_utc": "2026-09-24T14:42:16.177214+00:00",
+      "elapsed_seconds": 5.216718,
+      "chapters": 26,
+      "groups": 174,
+      "regions": 4119,
+      "gaps": 4102,
+      "errors": [],
+      "method": "Fresh in-memory checks: complete chapter/group partitions; every raw region identity, time and text hash; exact group intersections and chapter routing; exact gap complement; chapter heading times and draft labels; chapter input sets, local/global ranges and hashes; part counts and durations. No raw text rendered to model.",
+      "ledger_sha256": "5844cb8837eec6d656dbd737a01d91f4b87891b3adb36ffba539c447a8ae6178",
+      "summary_rechecked_utc": "2026-09-24T14:45:25.326306+00:00",
+      "summary_errors": [],
+      "signature_check_recorded_separately": true,
+      "reuse_this_pass": {
+        "verified_utc": "2026-09-24T14:47:36.252513+00:00",
+        "basis": "Exact raw baseline and caption fingerprints match; all chapter/session files and coverage ledger unchanged. Original computation times/results retained; computation not rerun."
+      }
+    },
+    "part_metadata_and_signatures": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:43:25.316839+00:00",
+      "finished_utc": "2026-09-24T14:43:25.325902+00:00",
+      "elapsed_seconds": 0.009053,
+      "parts": 17,
+      "errors": [],
+      "method": "Exact signature dict with model/checkpoint identity and per-part audio_sha256, complete flag and source offset; input hashes still match original baseline.",
+      "reuse_this_pass": {
+        "verified_utc": "2026-09-24T14:47:36.252524+00:00",
+        "basis": "Exact raw baseline and caption fingerprints match; all chapter/session files and coverage ledger unchanged. Original computation times/results retained; computation not rerun."
+      }
+    },
+    "local_Markdown_structure": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:47:36.252532+00:00",
+      "finished_utc": "2026-09-24T14:47:36.284337+00:00",
+      "elapsed_seconds": 0.031821,
+      "files": 34,
+      "errors": [],
+      "checks": [
+        "one H1",
+        "heading progression and duplicate heading text",
+        "no trailing whitespace or tabs",
+        "single final newline",
+        "balanced fences with language",
+        "table separators, consistent columns and surrounding blank lines"
+      ],
+      "markdownlint_available": false,
+      "limitation": "Bounded standard-library fallback, not full markdownlint. No dependencies installed. Unicode timing notation in the separate session review is not treated as a curation-format failure; no new universal line-length rule applied to existing Day 3 prose."
+    },
+    "local_links": {
+      "passed": true,
+      "relative_links": 104,
+      "anchors": 2,
+      "broken": [],
+      "method": "Fresh inline relative Markdown link targets and GitHub-style heading fragments, including day-local session review. No external URLs fetched.",
+      "external_local_target_fingerprints": {
+        "docs/reference/session-analysis.md": {
+          "bytes": 9033,
+          "sha256": "2d9a61f5bdcb270e3d9c2900700df7ed051496b304e19ddbcc324c87ba45033e"
+        },
+        "docs/reference/youtube-sessions.md": {
+          "bytes": 14686,
+          "sha256": "a2273f7f06540e38787650a11697ffa5c104da3790d131bd19ebb2ea87373988"
+        }
+      },
+      "concurrency_limit": "Parent root/docs reference edits are expected. External target fingerprints are observation-time evidence, not a freeze or authorization to edit those files.",
+      "checked_utc": "2026-09-24T14:47:36.284367+00:00"
+    },
+    "JSON_parse": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:47:36.284374+00:00",
+      "finished_utc": "2026-09-24T14:47:36.334841+00:00",
+      "files": [
+        "coverage-ledger.json",
+        "input-inventory.json",
+        "validation.json"
+      ],
+      "errors": [],
+      "duplicate_keys": [],
+      "prospective_report_roundtrip": "Checked in memory before writing; final on-disk check recorded in tool handoff, not recursively self-attested."
+    },
+    "SDR_session_input_and_alignment_metadata": {
+      "passed": true,
+      "started_utc": "2026-09-24T14:43:25.334795+00:00",
+      "finished_utc": "2026-09-24T14:43:25.349649+00:00",
+      "elapsed_seconds": 0.014861,
+      "cues": 1967,
+      "first_cue": "00:00:00.160",
+      "last_cue_end": "00:34:01.559",
+      "anchors": 12,
+      "anchor_first": "00:00:00.160",
+      "anchor_last": "00:33:52.240",
+      "well_matched_offsets_seconds": [
+        21591.464,
+        21591.624
+      ],
+      "errors": [],
+      "input_fingerprints": {
+        ".data/youtube/Iia8EF7niiA/raw/automatic.en-orig.vtt": {
+          "bytes": 352426,
+          "sha256": "0db70be482ca81acf235bcc7b457023e07d445b5a6761c9b63e0002a95f9347b"
+        },
+        ".data/youtube/Iia8EF7niiA/derived/automatic.en-orig.md": {
+          "bytes": 233307,
+          "sha256": "d5e4a47dd3e9f6138f405b64521d8835394345b4794672c7e099754f7c4e90aa"
+        }
+      },
+      "fingerprints_rechecked_utc": "2026-09-24T14:45:25.405277+00:00",
+      "method": "Caption and mechanical derivative match declared hashes; all anchor cue/ASR region starts exist; offset arithmetic matches displayed precision. Part 12/13/14 ASR hashes match unchanged inventory.",
+      "limitation": "No new semantic anchor matching, audio/video/screen review, full-caption reading or raw text rendering to model. Session remains provisional caption-only; not full-day synthesis.",
+      "reuse_this_pass": {
+        "verified_utc": "2026-09-24T14:47:36.252528+00:00",
+        "basis": "Exact raw baseline and caption fingerprints match; all chapter/session files and coverage ledger unchanged. Original computation times/results retained; computation not rerun."
+      }
+    },
+    "changed_document_source_conventions": {
+      "passed": true,
+      "reviewed_files": [
+        "README.md",
+        "sources.md"
+      ],
+      "findings": [],
+      "method": "Inspected the two parent corrections: blank separator after the README session table and source-summary start matching the unchanged 12-anchor SDR table. Reverse-applying only those two edits reproduces prior artifact hashes exactly; earlier source-convention review remains applicable.",
+      "quotations": "No audio-verified quotation claimed. SDR partial-trust wording is now a paraphrase; residual quoted tokens are named labels/uncertain machine-rendering candidates, not verified speech.",
+      "limitation": "Not a fresh full-day semantic or audio audit. Historical reading claims were not rerun.",
+      "checked_utc": "2026-09-24T14:47:36.335374+00:00"
+    },
+    "artifact_set_and_hashes": {
+      "passed": true,
+      "artifacts": 36,
+      "changed_since_previous_report": [
+        "README.md",
+        "sources.md"
+      ],
+      "added_since_previous_report": [],
+      "removed_since_previous_report": [],
+      "unchanged": 34,
+      "method": "All current day-local files inventoried with byte count and SHA-256, excluding this report to avoid recursion. Expected changed content inspected first. Current fingerprints do not mean content blockers are waived.",
+      "checked_utc": "2026-09-24T14:47:36.335387+00:00"
+    }
+  },
+  "validator_corrections": [
+    "Initial comparison rounded combined JSON offsets; corrected to exact original float addition. No input change.",
+    "Second validator used exact floating subtraction for final-part duration; 1398.5279999999984 versus 1398.528. Corrected to exact sample-count/rate duration. No input change."
+  ],
+  "not_performed": [
+    "Audio listening/claim verification",
+    "Original source re-download or M4A strict decode",
+    "YouTube alignment",
+    "Independent inspection of demonstrated services/code",
+    "Event synthesis",
+    "Markdownlint: not installed on PATH; no dependencies downloaded"
+  ],
+  "coverage": {
+    "chapters": 26,
+    "sections": 174,
+    "duration_ms": 30198528,
+    "regions": 4119,
+    "recognition_classes": {
+      "label_only_candidate": 296,
+      "text_present": 3817,
+      "empty": 6
+    },
+    "region_duration_ms": 25258048,
+    "no_region_intervals": 4102,
+    "no_region_duration_ms": 4940480,
+    "cross_section_regions": 0
+  },
+  "final_checked_utc": "2026-09-24T14:47:36.335412+00:00",
+  "scope": {
+    "allowed_writes": [
+      "docs/days/day-02/validation.json"
+    ],
+    "network": false,
+    "git_operations": false,
+    "raw_modifications": false,
+    "other_document_writes": false,
+    "expected_concurrency": "Parent root/docs reference edits only; day-local input/artifact drift stops report writes."
+  },
+  "execution_method": "Bounded in-memory Python standard-library recheck of the two parent fixes, all current Day 2 Markdown/links/JSON, original raw baseline/export fingerprints and artifact set. Only Day 2 validation.json written; no scripts/caches, Git, network, raw changes or Day 3 writes.",
+  "artifacts": {
+    "README.md": {
+      "bytes": 2974,
+      "sha256": "e2f9d99deacac41cb2d6578ebbf1894c0ae4d1dbda2c5843bcef72378e4589e3"
+    },
+    "coverage-ledger.json": {
+      "bytes": 3244670,
+      "sha256": "5844cb8837eec6d656dbd737a01d91f4b87891b3adb36ffba539c447a8ae6178"
+    },
+    "editorial-change-log.md": {
+      "bytes": 7553,
+      "sha256": "211d1ea20948a6fc5c02bb103575c7d4788ede36c6092a9de48363f37d4163c1"
+    },
+    "entities.md": {
+      "bytes": 13180,
+      "sha256": "c1f366d1a69cb65e65a544c9354c0b4cb1f099550ec6a5790737ff0af60eef88"
+    },
+    "gap-ledger.md": {
+      "bytes": 8471,
+      "sha256": "9ac20bdf62a5f4ab1bf506fef9ca8ec23ac60e994c20f2facb9c5ffd900ea04c"
+    },
+    "input-inventory.json": {
+      "bytes": 14523,
+      "sha256": "7c54748a9f3061a0fe52449bea2f2b311592920fc651ee0681829242d181d44b"
+    },
+    "review-queue.md": {
+      "bytes": 9242,
+      "sha256": "efd2f8b60752669fb7af15b18faca24e35a3591209ff74e2ebe16d8e4ee8336a"
+    },
+    "sessions/sdr-Iia8EF7niiA.md": {
+      "bytes": 15026,
+      "sha256": "d2564d84817c7d325aa0b91771a44c688ae4a04fea0b61135fa7e794be01e964"
+    },
+    "sources.md": {
+      "bytes": 6840,
+      "sha256": "6ab2d1cef05c9a1752e89a311f24a4167a89eaf7411dc6aba6dcbbf75bb801c3"
+    },
+    "transcripts/01-pivot-and-game-design.md": {
+      "bytes": 9450,
+      "sha256": "d9edd8aa37b9045a3093716cf4a635111100d44944ec3a6466cfb97208261dae"
+    },
+    "transcripts/02-sales-engineering-and-slide-bot.md": {
+      "bytes": 6679,
+      "sha256": "f40434e23b1a6a5ac865dec6f87cfb76156a0ef2a82a585d4b997fc1a39b6ff9"
+    },
+    "transcripts/03-flylo-competitive-research.md": {
+      "bytes": 8850,
+      "sha256": "e4977bd58a31e1c5daa155a5c962319683d25b73c0af00345cf0b1e26ea507df"
+    },
+    "transcripts/04-workshop-results-and-guardrails.md": {
+      "bytes": 8206,
+      "sha256": "03b3409035261cfd172ca8df9663b670e8da2cecdf25ad6e0f27fce448bec2b4"
+    },
+    "transcripts/05-shared-context-and-build-interruption.md": {
+      "bytes": 7542,
+      "sha256": "3720cdf63f57958019bcc912a857a8c2e074efa8e3c9fec3721dc66a16893f49"
+    },
+    "transcripts/06-local-prototype-and-first-playtest.md": {
+      "bytes": 8086,
+      "sha256": "593f4b70c85d83d1fd94dc269cbac90486b1b55fe455dec418bb9e3904772f22"
+    },
+    "transcripts/07-coffee-shop-user-story.md": {
+      "bytes": 2814,
+      "sha256": "6f4730171137f99c2ba9b49a1487a8f2bded6fe0e796e747092c19e5b4253cb5"
+    },
+    "transcripts/08-visual-iteration-and-strategy-questions.md": {
+      "bytes": 6212,
+      "sha256": "a5ab785b18055c8cd7b51534fc2900ebeba8855f8aa48ae9dba0f3e7b1d226d7"
+    },
+    "transcripts/09-karen-newspaper-and-personal-automation.md": {
+      "bytes": 9380,
+      "sha256": "daaa5eddd37b54cd9aca9aef4f66a3e1cb7b482611bb849f7b42d7bb9a05a8db"
+    },
+    "transcripts/10-whiteboard-to-game-flow.md": {
+      "bytes": 6412,
+      "sha256": "98b5f9899654054ee6290aec7ee8cf2e4697c408aad0da0587facf7c687c6571"
+    },
+    "transcripts/11-assets-and-durable-bot-instructions.md": {
+      "bytes": 5286,
+      "sha256": "2ff4562320605a5fdf29788c7e92a2277fc2dff7267c85453ba4053853d19b76"
+    },
+    "transcripts/12-polish-security-and-work-split.md": {
+      "bytes": 6812,
+      "sha256": "10154a442ecb9c7c939bac60162b22ee3e33b74ee522ef7dad3782a7de92c6f3"
+    },
+    "transcripts/13-sales-workflows-and-questions.md": {
+      "bytes": 10101,
+      "sha256": "2bbd6c493021698e29ed22ae37525e1cff0b1c6aebdb6d6aba2a3a7519ab777a"
+    },
+    "transcripts/14-matthew-berman-automation-and-attention.md": {
+      "bytes": 8705,
+      "sha256": "8bfc15efa903d81da91c4e0f8a312448bed6a5e2753e04c91465b51550cb575a"
+    },
+    "transcripts/15-nokia-customer-video.md": {
+      "bytes": 2830,
+      "sha256": "09f1b0d3c8b5bcb818c3ba6ba4ff436261362d3144e803587d98b5fb8dad247d"
+    },
+    "transcripts/16-internship-search-and-writing.md": {
+      "bytes": 6245,
+      "sha256": "42e32945d2d365c4513bace265385c7922dce89e2a375615c87fff48e7389409"
+    },
+    "transcripts/17-game-marketing-and-career-advice.md": {
+      "bytes": 8178,
+      "sha256": "8494b7ae415a72a7b3647e92f769e5f9b2f25809716b97154a748a18463028ab"
+    },
+    "transcripts/18-sdr-workflow-design.md": {
+      "bytes": 5834,
+      "sha256": "17e6be900b8d33a226f0f978ff1a0681a4a0849277e3845c69f3d7bab9f0f790"
+    },
+    "transcripts/19-sdr-demo-and-questions.md": {
+      "bytes": 8410,
+      "sha256": "094e8083d4516ffbc5686318cd64948989f6f14a426bb81a44257c0fe6d33188"
+    },
+    "transcripts/20-studio-backend-and-coordination.md": {
+      "bytes": 7356,
+      "sha256": "eb63a4df8597d35807ed99c75976e256e40b2963ac01130b63181119e8316d08"
+    },
+    "transcripts/21-game-design-and-shared-context.md": {
+      "bytes": 6155,
+      "sha256": "4bea6127bb0dacd04a7d6bd1030faa59d1616839bf0226be741e260899d567c6"
+    },
+    "transcripts/22-shipping-pressure-and-prototypes.md": {
+      "bytes": 5737,
+      "sha256": "225eba98e96aebc7ed1d676f28fa9940d813ef3626a63706c39b8712e6822373"
+    },
+    "transcripts/23-support-workflow-and-demo-setup.md": {
+      "bytes": 5174,
+      "sha256": "ee350067d5ef6fa62f61bfe662a6d66eb2252a1f741328cd568598b31e27520d"
+    },
+    "transcripts/24-support-tickets-and-approval-gates.md": {
+      "bytes": 6672,
+      "sha256": "09bb3208cffb468559f43bdfa18849de7a03a1407aee88dc04abe25e6fb44f6e"
+    },
+    "transcripts/25-support-costs-traces-and-governance.md": {
+      "bytes": 5464,
+      "sha256": "f1df1e309d21808fde6db927ed1e1d10dff051fb318021703776a4a0ad74562b"
+    },
+    "transcripts/26-closing-previews-and-unfinished-game.md": {
+      "bytes": 5984,
+      "sha256": "3a85b4e5576ed42bdec11fecb2081292dd7eacd6166984e8f3d753dd3f65d736"
+    },
+    "transcripts/README.md": {
+      "bytes": 7325,
+      "sha256": "d4e6ca98a855f473c268d85ae6cdf149fe2fd1002119144f5c73d5b63d649949"
+    }
+  },
+  "artifact_manifest_excludes_self": true,
+  "validation_history": [
+    {
+      "result": "Exact pre-save-preflight report snapshot; prior timestamps/results/failed attempts retained, not represented as rerun",
+      "snapshot": {
+        "schema_version": 1,
+        "checked_utc": "2026-09-24T11:34:17.647661+00:00",
+        "status": "structural_and_integrity_checks_passed_audio_review_pending",
+        "checks": {
+          "raw_inventory": {
+            "files": 90,
+            "added": [],
+            "removed": [],
+            "hash_or_size_mismatches": []
+          },
+          "asr_export_hashes": {
+            "count": 54,
+            "match": true
+          },
+          "part_metadata_and_signatures": true,
+          "wav_properties_and_manifest_hashes": true,
+          "pcm_samples": 483176448,
+          "pcm_sha256": "5b459a94162a57a8c7951dfa3682cfec533e0c595a1acba57775755edf3f16b1",
+          "combined_json_exact_part_concatenation": true,
+          "txt_srt_match_nonempty_json_text": true,
+          "txt_srt_max_timestamp_delta_ms": 0,
+          "export_time_tolerance_ms": 1,
+          "protected_documents": {
+            "docs/README.md": {
+              "baseline_sha256": "3bd01970fd93e109c7e22a9ad75eb44c9a890b70806302168d378ae74c3256a4",
+              "current_sha256": "bfcc6a3149fc4b88bb203ec8f079cd49c111d5c1f8754ee5fcc267faacf1ad2a",
+              "unchanged": false,
+              "curation_wrote_file": false,
+              "disposition": "Observed concurrent change; preserved without edits or revert"
+            },
+            "docs/reference/youtube-sessions.md": {
+              "baseline_sha256": "88d3dad63fe2f3d0aa8612592eddfca01cc996dbec19683c0caf7c601b9ed89e",
+              "current_sha256": "c055c3995b97b61dac6bad4f8f565e3670d1e852b5a08dd1a1ca65524f7ca906",
+              "unchanged": false,
+              "curation_wrote_file": false,
+              "disposition": "Observed concurrent change; preserved without edits or revert"
+            }
+          },
+          "chapter_section_order_and_contiguity": true,
+          "all_regions_routed": true,
+          "recognition_and_gap_duration_partition": true,
+          "chapter_input_reference_sets_and_offsets": {
+            "chapters": 26,
+            "passed": true
+          },
+          "required_chapter_sections_and_draft_status": true,
+          "final_raw_integrity_recheck": true,
+          "markdown_custom": {
+            "files": 33,
+            "local_links_checked": 93,
+            "issues": [],
+            "checks": [
+              "one H1 per file",
+              "no skipped heading levels or duplicate headings",
+              "balanced fenced code with language",
+              "no trailing whitespace",
+              "final newline",
+              "ASCII-only prose",
+              "no single-space accidental indentation",
+              "prose lines at most 100 columns, tables/headings exempt",
+              "consistent table column counts",
+              "all local Markdown link targets exist; no anchors present",
+              "no blockquotes or double-quote direct-quotation candidates",
+              "ASR-based review draft status in every Markdown file"
+            ],
+            "maximum_prose_columns": 89,
+            "markdownlint_run": false
+          }
+        },
+        "validator_corrections": [
+          "Initial comparison rounded combined JSON offsets; corrected to exact original float addition. No input change.",
+          "Second validator used exact floating subtraction for final-part duration; 1398.5279999999984 versus 1398.528. Corrected to exact sample-count/rate duration. No input change."
+        ],
+        "not_performed": [
+          "Audio listening/claim verification",
+          "Original source re-download or M4A strict decode",
+          "YouTube alignment",
+          "Independent inspection of demonstrated services/code",
+          "Event synthesis",
+          "Markdownlint: not installed on PATH; no dependencies downloaded"
+        ],
+        "coverage": {
+          "chapters": 26,
+          "sections": 174,
+          "duration_ms": 30198528,
+          "regions": 4119,
+          "recognition_classes": {
+            "label_only_candidate": 296,
+            "text_present": 3817,
+            "empty": 6
+          },
+          "region_duration_ms": 25258048,
+          "no_region_intervals": 4102,
+          "no_region_duration_ms": 4940480,
+          "cross_section_regions": 0
+        },
+        "final_checked_utc": "2026-09-24T11:40:29.562189+00:00",
+        "scope": {
+          "write_root": "docs/days/day-02",
+          "network": false,
+          "git_operations": false,
+          "raw_modifications": false,
+          "deletions": false,
+          "persisted_scripts": false,
+          "synthesis_run": false
+        },
+        "execution_method": "Bounded python3 -c standard-library checks in terminal tool calls; code executed in memory, no validator script persisted. Full invocations are in the task tool transcript.",
+        "artifacts": {
+          "README.md": {
+            "bytes": 3020,
+            "sha256": "469549d7aee006cf6c75b01ba15c799eb65805cba8df2613ba31972cc36baed2"
+          },
+          "coverage-ledger.json": {
+            "bytes": 3244670,
+            "sha256": "5844cb8837eec6d656dbd737a01d91f4b87891b3adb36ffba539c447a8ae6178"
+          },
+          "editorial-change-log.md": {
+            "bytes": 7553,
+            "sha256": "211d1ea20948a6fc5c02bb103575c7d4788ede36c6092a9de48363f37d4163c1"
+          },
+          "entities.md": {
+            "bytes": 13180,
+            "sha256": "c1f366d1a69cb65e65a544c9354c0b4cb1f099550ec6a5790737ff0af60eef88"
+          },
+          "gap-ledger.md": {
+            "bytes": 8471,
+            "sha256": "9ac20bdf62a5f4ab1bf506fef9ca8ec23ac60e994c20f2facb9c5ffd900ea04c"
+          },
+          "input-inventory.json": {
+            "bytes": 14523,
+            "sha256": "7c54748a9f3061a0fe52449bea2f2b311592920fc651ee0681829242d181d44b"
+          },
+          "review-queue.md": {
+            "bytes": 8043,
+            "sha256": "b3b77d98e32a7a177ba40195ef9f3a21fef28e4c8635121bd26325afa86f9e91"
+          },
+          "sources.md": {
+            "bytes": 5818,
+            "sha256": "2ed72c0863ed6ef4c48a788daf90b2cbfde3ec4155cb6bff508414bc04e1e846"
+          },
+          "transcripts/01-pivot-and-game-design.md": {
+            "bytes": 9450,
+            "sha256": "d9edd8aa37b9045a3093716cf4a635111100d44944ec3a6466cfb97208261dae"
+          },
+          "transcripts/02-sales-engineering-and-slide-bot.md": {
+            "bytes": 6679,
+            "sha256": "f40434e23b1a6a5ac865dec6f87cfb76156a0ef2a82a585d4b997fc1a39b6ff9"
+          },
+          "transcripts/03-flylo-competitive-research.md": {
+            "bytes": 8850,
+            "sha256": "e4977bd58a31e1c5daa155a5c962319683d25b73c0af00345cf0b1e26ea507df"
+          },
+          "transcripts/04-workshop-results-and-guardrails.md": {
+            "bytes": 8206,
+            "sha256": "03b3409035261cfd172ca8df9663b670e8da2cecdf25ad6e0f27fce448bec2b4"
+          },
+          "transcripts/05-shared-context-and-build-interruption.md": {
+            "bytes": 7542,
+            "sha256": "3720cdf63f57958019bcc912a857a8c2e074efa8e3c9fec3721dc66a16893f49"
+          },
+          "transcripts/06-local-prototype-and-first-playtest.md": {
+            "bytes": 8086,
+            "sha256": "593f4b70c85d83d1fd94dc269cbac90486b1b55fe455dec418bb9e3904772f22"
+          },
+          "transcripts/07-coffee-shop-user-story.md": {
+            "bytes": 2814,
+            "sha256": "6f4730171137f99c2ba9b49a1487a8f2bded6fe0e796e747092c19e5b4253cb5"
+          },
+          "transcripts/08-visual-iteration-and-strategy-questions.md": {
+            "bytes": 6212,
+            "sha256": "a5ab785b18055c8cd7b51534fc2900ebeba8855f8aa48ae9dba0f3e7b1d226d7"
+          },
+          "transcripts/09-karen-newspaper-and-personal-automation.md": {
+            "bytes": 9380,
+            "sha256": "daaa5eddd37b54cd9aca9aef4f66a3e1cb7b482611bb849f7b42d7bb9a05a8db"
+          },
+          "transcripts/10-whiteboard-to-game-flow.md": {
+            "bytes": 6412,
+            "sha256": "98b5f9899654054ee6290aec7ee8cf2e4697c408aad0da0587facf7c687c6571"
+          },
+          "transcripts/11-assets-and-durable-bot-instructions.md": {
+            "bytes": 5286,
+            "sha256": "2ff4562320605a5fdf29788c7e92a2277fc2dff7267c85453ba4053853d19b76"
+          },
+          "transcripts/12-polish-security-and-work-split.md": {
+            "bytes": 6812,
+            "sha256": "10154a442ecb9c7c939bac60162b22ee3e33b74ee522ef7dad3782a7de92c6f3"
+          },
+          "transcripts/13-sales-workflows-and-questions.md": {
+            "bytes": 10101,
+            "sha256": "2bbd6c493021698e29ed22ae37525e1cff0b1c6aebdb6d6aba2a3a7519ab777a"
+          },
+          "transcripts/14-matthew-berman-automation-and-attention.md": {
+            "bytes": 8705,
+            "sha256": "8bfc15efa903d81da91c4e0f8a312448bed6a5e2753e04c91465b51550cb575a"
+          },
+          "transcripts/15-nokia-customer-video.md": {
+            "bytes": 2830,
+            "sha256": "09f1b0d3c8b5bcb818c3ba6ba4ff436261362d3144e803587d98b5fb8dad247d"
+          },
+          "transcripts/16-internship-search-and-writing.md": {
+            "bytes": 6245,
+            "sha256": "42e32945d2d365c4513bace265385c7922dce89e2a375615c87fff48e7389409"
+          },
+          "transcripts/17-game-marketing-and-career-advice.md": {
+            "bytes": 8178,
+            "sha256": "8494b7ae415a72a7b3647e92f769e5f9b2f25809716b97154a748a18463028ab"
+          },
+          "transcripts/18-sdr-workflow-design.md": {
+            "bytes": 5834,
+            "sha256": "17e6be900b8d33a226f0f978ff1a0681a4a0849277e3845c69f3d7bab9f0f790"
+          },
+          "transcripts/19-sdr-demo-and-questions.md": {
+            "bytes": 8410,
+            "sha256": "094e8083d4516ffbc5686318cd64948989f6f14a426bb81a44257c0fe6d33188"
+          },
+          "transcripts/20-studio-backend-and-coordination.md": {
+            "bytes": 7356,
+            "sha256": "eb63a4df8597d35807ed99c75976e256e40b2963ac01130b63181119e8316d08"
+          },
+          "transcripts/21-game-design-and-shared-context.md": {
+            "bytes": 6155,
+            "sha256": "4bea6127bb0dacd04a7d6bd1030faa59d1616839bf0226be741e260899d567c6"
+          },
+          "transcripts/22-shipping-pressure-and-prototypes.md": {
+            "bytes": 5737,
+            "sha256": "225eba98e96aebc7ed1d676f28fa9940d813ef3626a63706c39b8712e6822373"
+          },
+          "transcripts/23-support-workflow-and-demo-setup.md": {
+            "bytes": 5174,
+            "sha256": "ee350067d5ef6fa62f61bfe662a6d66eb2252a1f741328cd568598b31e27520d"
+          },
+          "transcripts/24-support-tickets-and-approval-gates.md": {
+            "bytes": 6672,
+            "sha256": "09bb3208cffb468559f43bdfa18849de7a03a1407aee88dc04abe25e6fb44f6e"
+          },
+          "transcripts/25-support-costs-traces-and-governance.md": {
+            "bytes": 5464,
+            "sha256": "f1df1e309d21808fde6db927ed1e1d10dff051fb318021703776a4a0ad74562b"
+          },
+          "transcripts/26-closing-previews-and-unfinished-game.md": {
+            "bytes": 5984,
+            "sha256": "3a85b4e5576ed42bdec11fecb2081292dd7eacd6166984e8f3d753dd3f65d736"
+          },
+          "transcripts/README.md": {
+            "bytes": 7325,
+            "sha256": "d4e6ca98a855f473c268d85ae6cdf149fe2fd1002119144f5c73d5b63d649949"
+          }
+        },
+        "artifact_manifest_excludes_self": true
+      }
+    },
+    {
+      "result": "Blocked preflight before parent fixed README spacing and source anchor range; exact prior report snapshot preserves failures, timestamps and results",
+      "snapshot": {
+        "schema_version": 1,
+        "checked_utc": "2026-09-24T14:45:25.405345+00:00",
+        "status": "save_preflight_blocked_content_findings_audio_review_pending",
+        "checks": {
+          "raw_baseline_integrity": {
+            "passed": true,
+            "started_utc": "2026-09-24T14:45:20.592509+00:00",
+            "finished_utc": "2026-09-24T14:45:25.289959+00:00",
+            "elapsed_seconds": 4.69745,
+            "files": 90,
+            "bytes": 1384287830,
+            "comparison": {
+              "added": [],
+              "missing": [],
+              "changed": []
+            },
+            "baseline_inventory": {
+              "bytes": 14523,
+              "sha256": "7c54748a9f3061a0fe52449bea2f2b311592920fc651ee0681829242d181d44b"
+            },
+            "baseline_unchanged": true,
+            "method": "Fresh full file-set, byte-count and SHA-256 comparison against unchanged original input-inventory.json; no rebaseline. Day 3 also compares stored symlink flags; Day 2 baseline has no symlink flags."
+          },
+          "ASR_export_manifest_hashes": {
+            "passed": true,
+            "exports": 54,
+            "mismatches": [],
+            "manifest": {
+              "bytes": 25265,
+              "sha256": "e1c5915ce8782e3ece0ba2d4f8812aebf933af2a733f918fa3710a2a8f1d7af2"
+            },
+            "method": "Current raw hashes compared with original ASR manifest output_sha256 entries; no export regeneration."
+          },
+          "coverage_group_routing": {
+            "passed": true,
+            "started_utc": "2026-09-24T14:42:10.960495+00:00",
+            "finished_utc": "2026-09-24T14:42:16.177214+00:00",
+            "elapsed_seconds": 5.216718,
+            "chapters": 26,
+            "groups": 174,
+            "regions": 4119,
+            "gaps": 4102,
+            "errors": [],
+            "method": "Fresh in-memory checks: complete chapter/group partitions; every raw region identity, time and text hash; exact group intersections and chapter routing; exact gap complement; chapter heading times and draft labels; chapter input sets, local/global ranges and hashes; part counts and durations. No raw text rendered to model.",
+            "ledger_sha256": "5844cb8837eec6d656dbd737a01d91f4b87891b3adb36ffba539c447a8ae6178",
+            "summary_rechecked_utc": "2026-09-24T14:45:25.326306+00:00",
+            "summary_errors": [],
+            "signature_check_recorded_separately": true
+          },
+          "part_metadata_and_signatures": {
+            "passed": true,
+            "started_utc": "2026-09-24T14:43:25.316839+00:00",
+            "finished_utc": "2026-09-24T14:43:25.325902+00:00",
+            "elapsed_seconds": 0.009053,
+            "parts": 17,
+            "errors": [],
+            "method": "Exact signature dict with model/checkpoint identity and per-part audio_sha256, complete flag and source offset; input hashes still match original baseline."
+          },
+          "local_Markdown_structure": {
+            "passed": false,
+            "started_utc": "2026-09-24T14:45:25.326329+00:00",
+            "finished_utc": "2026-09-24T14:45:25.357131+00:00",
+            "elapsed_seconds": 0.030819,
+            "files": 34,
+            "errors": [
+              {
+                "file": "README.md",
+                "line": 25,
+                "rule": "blank line after table / before following list"
+              }
+            ],
+            "checks": [
+              "one H1",
+              "heading progression and duplicate heading text",
+              "no trailing whitespace or tabs",
+              "single final newline",
+              "balanced fences with language",
+              "table separators, consistent columns and surrounding blank lines"
+            ],
+            "markdownlint_available": false,
+            "limitation": "Bounded standard-library fallback, not full markdownlint. No dependencies installed. Unicode timing notation in the separate session review is not treated as a curation-format failure; no new universal line-length rule applied to existing Day 3 prose."
+          },
+          "local_links": {
+            "passed": true,
+            "relative_links": 104,
+            "anchors": 2,
+            "broken": [],
+            "method": "Fresh inline relative Markdown link targets and GitHub-style heading fragments, including day-local session review. No external URLs fetched.",
+            "external_local_target_fingerprints": {
+              "docs/reference/session-analysis.md": {
+                "bytes": 9033,
+                "sha256": "2d9a61f5bdcb270e3d9c2900700df7ed051496b304e19ddbcc324c87ba45033e"
+              },
+              "docs/reference/youtube-sessions.md": {
+                "bytes": 14686,
+                "sha256": "a2273f7f06540e38787650a11697ffa5c104da3790d131bd19ebb2ea87373988"
+              }
+            },
+            "concurrency_limit": "Parent root/docs reference edits are expected. External target fingerprints are observation-time evidence, not a freeze or authorization to edit those files."
+          },
+          "JSON_parse": {
+            "passed": true,
+            "started_utc": "2026-09-24T14:45:25.357558+00:00",
+            "finished_utc": "2026-09-24T14:45:25.402956+00:00",
+            "files": [
+              "coverage-ledger.json",
+              "input-inventory.json",
+              "validation.json"
+            ],
+            "errors": [],
+            "duplicate_keys": [],
+            "prospective_report_roundtrip": "Checked in memory before writing; final on-disk check recorded in tool handoff, not recursively self-attested."
+          },
+          "SDR_session_input_and_alignment_metadata": {
+            "passed": true,
+            "started_utc": "2026-09-24T14:43:25.334795+00:00",
+            "finished_utc": "2026-09-24T14:43:25.349649+00:00",
+            "elapsed_seconds": 0.014861,
+            "cues": 1967,
+            "first_cue": "00:00:00.160",
+            "last_cue_end": "00:34:01.559",
+            "anchors": 12,
+            "anchor_first": "00:00:00.160",
+            "anchor_last": "00:33:52.240",
+            "well_matched_offsets_seconds": [
+              21591.464,
+              21591.624
+            ],
+            "errors": [],
+            "input_fingerprints": {
+              ".data/youtube/Iia8EF7niiA/raw/automatic.en-orig.vtt": {
+                "bytes": 352426,
+                "sha256": "0db70be482ca81acf235bcc7b457023e07d445b5a6761c9b63e0002a95f9347b"
+              },
+              ".data/youtube/Iia8EF7niiA/derived/automatic.en-orig.md": {
+                "bytes": 233307,
+                "sha256": "d5e4a47dd3e9f6138f405b64521d8835394345b4794672c7e099754f7c4e90aa"
+              }
+            },
+            "fingerprints_rechecked_utc": "2026-09-24T14:45:25.405277+00:00",
+            "method": "Caption and mechanical derivative match declared hashes; all anchor cue/ASR region starts exist; offset arithmetic matches displayed precision. Part 12/13/14 ASR hashes match unchanged inventory.",
+            "limitation": "No new semantic anchor matching, audio/video/screen review, full-caption reading or raw text rendering to model. Session remains provisional caption-only; not full-day synthesis."
+          },
+          "changed_document_source_conventions": {
+            "passed": false,
+            "reviewed_files": [
+              "README.md",
+              "review-queue.md",
+              "sessions/sdr-Iia8EF7niiA.md",
+              "sources.md"
+            ],
+            "findings": [
+              {
+                "file": "sources.md",
+                "line": 130,
+                "issue": "Summary says 12 content anchors from video 00:00:08.9, but the 12-row session table starts at 00:00:00.160. Ten well-matched anchors exclude the first and the off-mic outlier.",
+                "required_parent_action": "Correct the overall anchor range/count wording without implying playback review; no source or chapter change required."
+              }
+            ],
+            "method": "Read changed documents against day source records, chapter conventions and session-analysis guidance. Full-day ASR curation remains distinct from separately authorized provisional caption review. Readiness, attribution, reported-versus-verified outcomes and rights limits remain explicit.",
+            "quotations": "No audio-verified quotation claimed. SDR partial-trust wording is now a paraphrase; residual quoted tokens are named labels/uncertain machine-rendering candidates, not verified speech.",
+            "limitation": "Not a fresh full-day semantic or audio audit. Historical reading claims were not rerun."
+          },
+          "artifact_set_and_hashes": {
+            "passed": true,
+            "artifacts": 36,
+            "changed_since_previous_report": [
+              "README.md",
+              "review-queue.md",
+              "sources.md"
+            ],
+            "added_since_previous_report": [
+              "sessions/sdr-Iia8EF7niiA.md"
+            ],
+            "removed_since_previous_report": [],
+            "unchanged": 32,
+            "method": "All current day-local files inventoried with byte count and SHA-256, excluding this report to avoid recursion. Expected changed content inspected first. Current fingerprints do not mean content blockers are waived."
+          }
+        },
+        "validator_corrections": [
+          "Initial comparison rounded combined JSON offsets; corrected to exact original float addition. No input change.",
+          "Second validator used exact floating subtraction for final-part duration; 1398.5279999999984 versus 1398.528. Corrected to exact sample-count/rate duration. No input change."
+        ],
+        "not_performed": [
+          "Audio listening/claim verification",
+          "Original source re-download or M4A strict decode",
+          "YouTube alignment",
+          "Independent inspection of demonstrated services/code",
+          "Event synthesis",
+          "Markdownlint: not installed on PATH; no dependencies downloaded"
+        ],
+        "coverage": {
+          "chapters": 26,
+          "sections": 174,
+          "duration_ms": 30198528,
+          "regions": 4119,
+          "recognition_classes": {
+            "label_only_candidate": 296,
+            "text_present": 3817,
+            "empty": 6
+          },
+          "region_duration_ms": 25258048,
+          "no_region_intervals": 4102,
+          "no_region_duration_ms": 4940480,
+          "cross_section_regions": 0
+        },
+        "final_checked_utc": "2026-09-24T14:45:25.405345+00:00",
+        "scope": {
+          "allowed_writes": [
+            "docs/days/day-02/validation.json",
+            "docs/days/day-03/validation.json"
+          ],
+          "network": false,
+          "git_operations": false,
+          "raw_modifications": false,
+          "other_document_writes": false,
+          "expected_concurrency": "Parent root/docs reference edits only; day-local input/artifact drift stops report writes."
+        },
+        "execution_method": "Bounded Python standard-library checks executed in memory via terminal; only the two authorized validation.json reports written. Full invocations in task tool transcript. No scripts or caches persisted.",
+        "artifacts": {
+          "README.md": {
+            "bytes": 2973,
+            "sha256": "f78854fdf8ec9d1e25bd2eeedfb97eba02175fddcdfd6a8111edccc52b3a770e"
+          },
+          "coverage-ledger.json": {
+            "bytes": 3244670,
+            "sha256": "5844cb8837eec6d656dbd737a01d91f4b87891b3adb36ffba539c447a8ae6178"
+          },
+          "editorial-change-log.md": {
+            "bytes": 7553,
+            "sha256": "211d1ea20948a6fc5c02bb103575c7d4788ede36c6092a9de48363f37d4163c1"
+          },
+          "entities.md": {
+            "bytes": 13180,
+            "sha256": "c1f366d1a69cb65e65a544c9354c0b4cb1f099550ec6a5790737ff0af60eef88"
+          },
+          "gap-ledger.md": {
+            "bytes": 8471,
+            "sha256": "9ac20bdf62a5f4ab1bf506fef9ca8ec23ac60e994c20f2facb9c5ffd900ea04c"
+          },
+          "input-inventory.json": {
+            "bytes": 14523,
+            "sha256": "7c54748a9f3061a0fe52449bea2f2b311592920fc651ee0681829242d181d44b"
+          },
+          "review-queue.md": {
+            "bytes": 9242,
+            "sha256": "efd2f8b60752669fb7af15b18faca24e35a3591209ff74e2ebe16d8e4ee8336a"
+          },
+          "sessions/sdr-Iia8EF7niiA.md": {
+            "bytes": 15026,
+            "sha256": "d2564d84817c7d325aa0b91771a44c688ae4a04fea0b61135fa7e794be01e964"
+          },
+          "sources.md": {
+            "bytes": 6838,
+            "sha256": "2d8f41f411174c17396c9e264d0ac65874143da2ca59dd4303155b668828c535"
+          },
+          "transcripts/01-pivot-and-game-design.md": {
+            "bytes": 9450,
+            "sha256": "d9edd8aa37b9045a3093716cf4a635111100d44944ec3a6466cfb97208261dae"
+          },
+          "transcripts/02-sales-engineering-and-slide-bot.md": {
+            "bytes": 6679,
+            "sha256": "f40434e23b1a6a5ac865dec6f87cfb76156a0ef2a82a585d4b997fc1a39b6ff9"
+          },
+          "transcripts/03-flylo-competitive-research.md": {
+            "bytes": 8850,
+            "sha256": "e4977bd58a31e1c5daa155a5c962319683d25b73c0af00345cf0b1e26ea507df"
+          },
+          "transcripts/04-workshop-results-and-guardrails.md": {
+            "bytes": 8206,
+            "sha256": "03b3409035261cfd172ca8df9663b670e8da2cecdf25ad6e0f27fce448bec2b4"
+          },
+          "transcripts/05-shared-context-and-build-interruption.md": {
+            "bytes": 7542,
+            "sha256": "3720cdf63f57958019bcc912a857a8c2e074efa8e3c9fec3721dc66a16893f49"
+          },
+          "transcripts/06-local-prototype-and-first-playtest.md": {
+            "bytes": 8086,
+            "sha256": "593f4b70c85d83d1fd94dc269cbac90486b1b55fe455dec418bb9e3904772f22"
+          },
+          "transcripts/07-coffee-shop-user-story.md": {
+            "bytes": 2814,
+            "sha256": "6f4730171137f99c2ba9b49a1487a8f2bded6fe0e796e747092c19e5b4253cb5"
+          },
+          "transcripts/08-visual-iteration-and-strategy-questions.md": {
+            "bytes": 6212,
+            "sha256": "a5ab785b18055c8cd7b51534fc2900ebeba8855f8aa48ae9dba0f3e7b1d226d7"
+          },
+          "transcripts/09-karen-newspaper-and-personal-automation.md": {
+            "bytes": 9380,
+            "sha256": "daaa5eddd37b54cd9aca9aef4f66a3e1cb7b482611bb849f7b42d7bb9a05a8db"
+          },
+          "transcripts/10-whiteboard-to-game-flow.md": {
+            "bytes": 6412,
+            "sha256": "98b5f9899654054ee6290aec7ee8cf2e4697c408aad0da0587facf7c687c6571"
+          },
+          "transcripts/11-assets-and-durable-bot-instructions.md": {
+            "bytes": 5286,
+            "sha256": "2ff4562320605a5fdf29788c7e92a2277fc2dff7267c85453ba4053853d19b76"
+          },
+          "transcripts/12-polish-security-and-work-split.md": {
+            "bytes": 6812,
+            "sha256": "10154a442ecb9c7c939bac60162b22ee3e33b74ee522ef7dad3782a7de92c6f3"
+          },
+          "transcripts/13-sales-workflows-and-questions.md": {
+            "bytes": 10101,
+            "sha256": "2bbd6c493021698e29ed22ae37525e1cff0b1c6aebdb6d6aba2a3a7519ab777a"
+          },
+          "transcripts/14-matthew-berman-automation-and-attention.md": {
+            "bytes": 8705,
+            "sha256": "8bfc15efa903d81da91c4e0f8a312448bed6a5e2753e04c91465b51550cb575a"
+          },
+          "transcripts/15-nokia-customer-video.md": {
+            "bytes": 2830,
+            "sha256": "09f1b0d3c8b5bcb818c3ba6ba4ff436261362d3144e803587d98b5fb8dad247d"
+          },
+          "transcripts/16-internship-search-and-writing.md": {
+            "bytes": 6245,
+            "sha256": "42e32945d2d365c4513bace265385c7922dce89e2a375615c87fff48e7389409"
+          },
+          "transcripts/17-game-marketing-and-career-advice.md": {
+            "bytes": 8178,
+            "sha256": "8494b7ae415a72a7b3647e92f769e5f9b2f25809716b97154a748a18463028ab"
+          },
+          "transcripts/18-sdr-workflow-design.md": {
+            "bytes": 5834,
+            "sha256": "17e6be900b8d33a226f0f978ff1a0681a4a0849277e3845c69f3d7bab9f0f790"
+          },
+          "transcripts/19-sdr-demo-and-questions.md": {
+            "bytes": 8410,
+            "sha256": "094e8083d4516ffbc5686318cd64948989f6f14a426bb81a44257c0fe6d33188"
+          },
+          "transcripts/20-studio-backend-and-coordination.md": {
+            "bytes": 7356,
+            "sha256": "eb63a4df8597d35807ed99c75976e256e40b2963ac01130b63181119e8316d08"
+          },
+          "transcripts/21-game-design-and-shared-context.md": {
+            "bytes": 6155,
+            "sha256": "4bea6127bb0dacd04a7d6bd1030faa59d1616839bf0226be741e260899d567c6"
+          },
+          "transcripts/22-shipping-pressure-and-prototypes.md": {
+            "bytes": 5737,
+            "sha256": "225eba98e96aebc7ed1d676f28fa9940d813ef3626a63706c39b8712e6822373"
+          },
+          "transcripts/23-support-workflow-and-demo-setup.md": {
+            "bytes": 5174,
+            "sha256": "ee350067d5ef6fa62f61bfe662a6d66eb2252a1f741328cd568598b31e27520d"
+          },
+          "transcripts/24-support-tickets-and-approval-gates.md": {
+            "bytes": 6672,
+            "sha256": "09bb3208cffb468559f43bdfa18849de7a03a1407aee88dc04abe25e6fb44f6e"
+          },
+          "transcripts/25-support-costs-traces-and-governance.md": {
+            "bytes": 5464,
+            "sha256": "f1df1e309d21808fde6db927ed1e1d10dff051fb318021703776a4a0ad74562b"
+          },
+          "transcripts/26-closing-previews-and-unfinished-game.md": {
+            "bytes": 5984,
+            "sha256": "3a85b4e5576ed42bdec11fecb2081292dd7eacd6166984e8f3d753dd3f65d736"
+          },
+          "transcripts/README.md": {
+            "bytes": 7325,
+            "sha256": "d4e6ca98a855f473c268d85ae6cdf149fe2fd1002119144f5c73d5b63d649949"
+          }
+        },
+        "artifact_manifest_excludes_self": true,
+        "failed_checks": [
+          "local_Markdown_structure",
+          "changed_document_source_conventions"
+        ],
+        "output_counts": {
+          "chapters": 26,
+          "Markdown": 34,
+          "files_including_this_report": 37
+        },
+        "save_preflight": {
+          "started_utc": "2026-09-24T14:42:10.960495+00:00",
+          "completed_utc": "2026-09-24T14:45:25.405345+00:00",
+          "final_pass_started_utc": "2026-09-24T14:45:20.572997+00:00",
+          "final_pass_elapsed_seconds": 4.832336,
+          "status": "save_preflight_blocked_content_findings_audio_review_pending",
+          "reused_raw_validation": {
+            "original_checked_utc": "2026-09-24T11:34:17.647661+00:00",
+            "basis": "Full original raw baseline inventories and exports match current bytes; baseline inventory and coverage ledger themselves match prior report fingerprints. Reuse is limited to exact historical raw results listed here; historical validator code, decodes and listening were not rerun.",
+            "results": {
+              "wav_properties_and_manifest_hashes": true,
+              "pcm_samples": 483176448,
+              "pcm_sha256": "5b459a94162a57a8c7951dfa3682cfec533e0c595a1acba57775755edf3f16b1",
+              "combined_json_exact_part_concatenation": true,
+              "txt_srt_match_nonempty_json_text": true,
+              "txt_srt_max_timestamp_delta_ms": 0,
+              "export_time_tolerance_ms": 1
+            }
+          },
+          "validation_attempts": [
+            {
+              "started_utc": "2026-09-24T14:42:10.960495+00:00",
+              "finished_utc": "2026-09-24T14:42:16.177214+00:00",
+              "result": "All routing checks passed except an erroneous signature comparison",
+              "validator_error": "Compared signature dict with model hash string",
+              "affected_parts": 17,
+              "raw_inputs_changed": false
+            },
+            {
+              "started_utc": "2026-09-24T14:43:25.316839+00:00",
+              "finished_utc": "2026-09-24T14:43:25.325902+00:00",
+              "result": "Corrected signature check passed",
+              "correction": "Compare exact model/audio_sha256 signature dict, complete flag and source offset",
+              "raw_inputs_changed": false
+            }
+          ],
+          "not_performed": [
+            "audio/video/screen playback",
+            "new full-day or full-caption semantic reading",
+            "semantic anchor rematching",
+            "M4A decode or WAV PCM payload computation",
+            "historical TXT/SRT/combined-export validator rerun (results reused on identical inputs)",
+            "external identity/product/outcome checks",
+            "event synthesis",
+            "markdownlint or dependency installation",
+            "Git/staging/gitleaks/publication"
+          ],
+          "remaining_blockers": [
+            {
+              "file": "README.md",
+              "line": 25,
+              "rule": "blank line after table / before following list"
+            },
+            {
+              "file": "sources.md",
+              "line": 130,
+              "issue": "Summary says 12 content anchors from video 00:00:08.9, but the 12-row session table starts at 00:00:00.160. Ten well-matched anchors exclude the first and the off-mic outlier.",
+              "required_parent_action": "Correct the overall anchor range/count wording without implying playback review; no source or chapter change required."
+            }
+          ],
+          "readiness": "Day-local integrity/structure evidence only. Audio acceptance, semantic completeness, external outcomes and redistribution rights remain unverified. Parent owns whole-set Markdown/JSON checks and staged gitleaks."
+        },
+        "method": "Bounded Python standard-library checks executed in memory via terminal; only the two authorized validation.json reports written. Full invocations in task tool transcript. No scripts or caches persisted."
+      }
+    }
+  ],
+  "failed_checks": [],
+  "output_counts": {
+    "chapters": 26,
+    "Markdown": 34,
+    "files_including_this_report": 37
+  },
+  "save_preflight": {
+    "started_utc": "2026-09-24T14:47:31.152165+00:00",
+    "completed_utc": "2026-09-24T14:47:36.335412+00:00",
+    "final_pass_started_utc": "2026-09-24T14:47:31.152165+00:00",
+    "final_pass_elapsed_seconds": 5.183201,
+    "status": "save_preflight_structural_integrity_pass_audio_review_pending",
+    "reused_raw_validation": {
+      "original_checked_utc": "2026-09-24T11:34:17.647661+00:00",
+      "basis": "Fresh exact comparison against original 90-file raw baseline and 54 ASR export hashes; original inventory and coverage ledger unchanged. Historical raw results listed here are reused, not recomputed.",
+      "results": {
+        "wav_properties_and_manifest_hashes": true,
+        "pcm_samples": 483176448,
+        "pcm_sha256": "5b459a94162a57a8c7951dfa3682cfec533e0c595a1acba57775755edf3f16b1",
+        "combined_json_exact_part_concatenation": true,
+        "txt_srt_match_nonempty_json_text": true,
+        "txt_srt_max_timestamp_delta_ms": 0,
+        "export_time_tolerance_ms": 1
+      }
+    },
+    "validation_attempts": [],
+    "not_performed": [
+      "audio/video/screen playback",
+      "new full-day or full-caption semantic reading",
+      "semantic anchor rematching",
+      "M4A decode or WAV PCM payload computation",
+      "historical TXT/SRT/combined-export validator rerun (results reused on identical inputs)",
+      "external identity/product/outcome checks",
+      "event synthesis",
+      "markdownlint or dependency installation",
+      "Git/staging/gitleaks/publication"
+    ],
+    "remaining_blockers": [],
+    "readiness": "Day-local integrity/structure evidence only. Audio acceptance, semantic completeness, external outcomes and redistribution rights remain unverified. Parent owns whole-set Markdown/JSON checks and staged gitleaks.",
+    "resolved_previous_blockers": [
+      {
+        "file": "README.md",
+        "resolution": "Blank separator added before following list; all 34 Markdown files pass fallback structural checks."
+      },
+      {
+        "file": "sources.md",
+        "resolution": "12-anchor range now starts 00:00:00.160, matching first row of unchanged session anchor table."
+      }
+    ],
+    "unchanged_dependency_checks_reused": [
+      "coverage_group_routing",
+      "part_metadata_and_signatures",
+      "SDR_session_input_and_alignment_metadata"
+    ]
+  },
+  "method": "Bounded in-memory Python standard-library recheck of the two parent fixes, all current Day 2 Markdown/links/JSON, original raw baseline/export fingerprints and artifact set. Only Day 2 validation.json written; no scripts/caches, Git, network, raw changes or Day 3 writes."
+}

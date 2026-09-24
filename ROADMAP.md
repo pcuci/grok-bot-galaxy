@@ -49,12 +49,12 @@ personal governance checkout necessary for understanding or processing evidence.
 Need: Machine ASR has no speaker diarization and cannot reliably distinguish
 quiet bot dictation, human conversation, and narrated bot output.
 
-- [ ] Confirm hosted-model transcript processing permission or choose local review.
-- [ ] Review the tentative chapter boundaries and account for every gap.
-- [ ] Establish people/bot instance ledgers with evidence and uncertainty.
-- [ ] Produce complete edited conversations separately from raw ASR.
+- [x] Confirm hosted-model transcript processing permission (approved 2026-09-24).
+- [x] Review the tentative chapter boundaries and account for every gap (ASR text; 32 chapters).
+- [x] Establish people/bot instance ledgers with evidence and uncertainty.
+- [x] Produce complete edited conversations separately from raw ASR (ASR-based draft).
 - [ ] Audio-check consequential corrections, identities, and chapter boundaries.
-- [ ] Track omissions, redactions, attribution uncertainty, and coverage explicitly.
+- [x] Track omissions, redactions, attribution uncertainty, and coverage explicitly.
 
 > **Win criteria:** Every chapter has source intervals and qualified attribution;
 > all substantive speech is represented or explicitly marked omitted/unresolved;
@@ -74,16 +74,18 @@ the live-build team shipped or independently verified a result.
 > requested, reported, demonstrated, and blocked states remain distinct; open
 > questions and disagreements remain visible.
 
-## Phase 3: Days 2 and 3
+## Phase 3: Days 2 and 3 (curation drafts done)
 
-### Epic: Extend only when sources are available
+### Epic: Extend only with reviewed evidence
 
 Need: The knowledge base must grow with reviewed evidence rather than filling
 future days with predictions or assuming that time passing proves completion.
 
-- [ ] Acquire Day 2 only after source and processing permissions are established.
-- [ ] Validate, transcribe, curate, and review Day 2 before adding outcomes.
-- [ ] Repeat the same gates independently for Day 3.
+- [x] Acquire Day 2 and Day 3 under private-study authorization.
+- [x] Validate, chunk, and locally transcribe both days.
+- [x] Produce ASR-based curation drafts (Day 2: 26 chapters; Day 3: 33).
+- [ ] Audio-review consequential claims, identities, and boundaries per day.
+- [ ] Run event synthesis per day before adding outcomes.
 - [ ] Build cross-day decision histories without overwriting earlier uncertainty.
 
 > **Win criteria:** Each day has its own provenance, validated parts, reviewed

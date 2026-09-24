@@ -1,9 +1,10 @@
 # Knowledge-base layout
 
 This is the complete planned Markdown layout, not a claim that all documents
-exist. Foundation pages are present; event analysis, registries, workflows, and
-cleaned conversations will be authored after processing permission and evidence
-review. Do not create empty analyses that imply work is complete.
+exist. Foundation pages, all three days' ASR-based curation drafts and one
+provisional SDR session review are present. Audio-verified acceptance, day-level
+synthesis and cross-day registries/workflows remain pending. Do not create empty
+analyses that imply work is complete.
 
 ## Repository boundaries
 
@@ -12,14 +13,17 @@ review. Do not create empty analyses that imply work is complete.
 - `AGENTS.md`: repository-owned authority and evidence policy.
 - `.agents/`: reusable instructions and optional governance imports, not event data.
 - `.data/day-01/`: ignored extracted M4A, half-hour WAVs, raw ASR, runner, VAD.
+- `.data/youtube/`: temporary ignored session captions and full-text Markdown;
+  preserve their separation from concise reviews in `docs/`.
 - `.data/audio-quality/`: ignored local codec experiments and interrupted outputs.
 - `audio/day-01/`: intended compact Opus parts and manifest; preparation pending.
 - `scripts/`: tested compact-audio preparation and validation, not an ASR replacement.
 - `docs/`: all event-facing Markdown, including cleaned conversations.
 
-There is no second `clean/` tree. `docs/days/day-01/transcripts/` will hold the
-cleaned, annotated conversation organized by meaning rather than processing
-chunks. Raw `.data/day-01/transcripts/` remains unchanged and ignored by Git.
+There is no second `clean/` tree. Each `docs/days/day-XX/transcripts/` holds
+nonverbatim, annotated conversation drafts organized by meaning rather than
+processing chunks. Raw `.data/day-XX/transcripts/` remains unchanged and ignored
+by Git.
 
 ## Complete documentation inventory
 
@@ -37,6 +41,8 @@ Paths below are relative to `docs/`.
   - `terminology.md`: recurring terms and ASR correction candidates.
   - `public-sources.md`: official schedule and public context, rights and retrieval notes.
   - `editorial-method.md`: transformations, attribution, review, and coverage rules.
+  - `youtube-sessions.md`: session source inventory and caption validation status.
+  - `session-analysis.md`: skill map, review cycle, and session-to-day synthesis.
   - `audio-storage.md`: local originals, compact codec choice, tests, and preparation.
   - `agent-workspace.md`: standards choices and optional governance maintenance.
   - `knowledge-base-layout.md`: this plan and tentative semantic chapter map.
@@ -57,19 +63,41 @@ Paths below are relative to `docs/`.
   - `decisions.md`: consequential choices with rationale, alternatives, and changes.
   - `lessons-and-failures.md`: what worked or failed and the strength of evidence.
   - `review-queue.md`: attribution, coverage, rights, and claim-review backlog.
-  - `transcripts/`: the thirteen proposed chapters listed below.
-- `days/day-02/README.md`: pending only; expand after acquisition and review.
-- `days/day-03/README.md`: pending only; expand after acquisition and review.
+  - `transcripts/`: 32 ASR-based draft chapters that supersede the thirteen
+    proposed below; see the [Day 1 index](../days/day-01/transcripts/README.md).
+- `days/day-02/`, `days/day-03/`: same artifact set as Day 1 (curation drafts
+  present; synthesis files pending), plus `entities.md`, `gap-ledger.md`,
+  `editorial-change-log.md`, `coverage-ledger.json`, `input-inventory.json`
+  and `validation.json`. Day 1 now has the same curation-draft files
+  (2026-09-24); its synthesis files remain pending.
 - `templates/`
   - `day-overview.md`
   - `transcript-chapter.md`
+  - `session-review.md`
   - `reusable-workflow.md`
+
+For individual session reviews, add
+`days/day-XX/sessions/<topic>-<video-id>.md` under the relevant day when review
+starts, and link it from that day's `README.md` with its review state. These
+concise, nonverbatim reviews complement full-day chapters; they do not duplicate
+full transcripts or imply complete day coverage. See the
+[session analysis guide](session-analysis.md) and
+[session review template](../templates/session-review.md). Create substantive
+reviews, not a directory of placeholder reports.
 
 When new days have authorized evidence, instantiate the same day-level artifact
 set as Day 1, choosing chapter filenames and boundaries from those recordings.
 Do not predict future chapter titles, participants, decisions, or results.
 
 ## Tentative Day 1 chapters
+
+**Superseded 2026-09-24** by the 32-chapter ASR-based draft in the
+[Day 1 transcript index](../days/day-01/transcripts/README.md); the mapping and
+boundary changes are in the
+[Day 1 editorial log](../days/day-01/editorial-change-log.md#chapter-map-changes),
+and every gap below is dispositioned in the
+[Day 1 gap ledger](../days/day-01/gap-ledger.md). The table is retained as the
+inherited plan.
 
 These boundaries and names are inherited planning notes, **not newly verified
 attribution or audio-reviewed segmentation**. All times are recording-relative,

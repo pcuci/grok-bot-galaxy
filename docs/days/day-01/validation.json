@@ -1,0 +1,513 @@
+{
+ "schema_version": 1,
+ "checked_utc": "2026-09-24T13:58:21.614512+00:00",
+ "status": "structural_pass_ASR_draft_audio_gates_unmet",
+ "scope": "Day 1 curation writes docs/days/day-01/** plus Day 1 status lines in README.md, docs/README.md, docs/reference/knowledge-base-layout.md and ROADMAP.md; raw .data/day-01 read-only; no network, transcription rerun, synthesis or Git operations",
+ "authorization": "Operator (Paul) approved editor-hosted model curation of Day 1 raw ASR on 2026-09-24, private study, same basis as Days 2 and 3",
+ "checks": {
+  "raw_baseline_integrity": {
+   "passed": true,
+   "details": {
+    "baseline_captured_utc": "2026-09-24T13:40:09.872497+00:00",
+    "baseline_files": 78,
+    "current_files": 78,
+    "bytes": 1278319538,
+    "added": [],
+    "missing": [],
+    "changed": [],
+    "method": "Fresh read-only SHA-256, size, symlink flag and full file-set comparison against pre-write baseline"
+   }
+  },
+  "source_M4A_hash": {
+   "passed": true,
+   "details": {
+    "sha256": "22d46211b73e916a5f3a845201fcfa72eaef878078103838a09e3ef987f0ba80"
+   }
+  },
+  "WAV_PCM_identity": {
+   "passed": true,
+   "details": {
+    "parts": 18,
+    "samples": 504201078,
+    "duration_seconds": 31512.567375,
+    "pcm_sha256": "0902621aa6c75a4c16b4ff9841bf0eb2b8adaaa8fcf9c70b6e585f360c89e5e2",
+    "bad_parts": [],
+    "method": "Fresh WAV header parse, payload SHA-256, checkpoint audio/model signature and completion; no decode or listening"
+   }
+  },
+  "combined_JSON_offsets": {
+   "passed": true,
+   "details": {
+    "regions": 2977,
+    "mismatches": [],
+    "method": "Exact text/part and local-plus-offset float comparison"
+   }
+  },
+  "TXT_SRT_JSON_consistency": {
+   "passed": true,
+   "details": {
+    "method": "Nonempty texts/order equal JSON; timestamps within 1.001 ms; sequential SRT IDs",
+    "inputs": [
+     {
+      "input": "part-01",
+      "regions": 95,
+      "nonempty": 95,
+      "txt": 95,
+      "srt": 95
+     },
+     {
+      "input": "part-02",
+      "regions": 160,
+      "nonempty": 160,
+      "txt": 160,
+      "srt": 160
+     },
+     {
+      "input": "part-03",
+      "regions": 165,
+      "nonempty": 165,
+      "txt": 165,
+      "srt": 165
+     },
+     {
+      "input": "part-04",
+      "regions": 118,
+      "nonempty": 118,
+      "txt": 118,
+      "srt": 118
+     },
+     {
+      "input": "part-05",
+      "regions": 109,
+      "nonempty": 109,
+      "txt": 109,
+      "srt": 109
+     },
+     {
+      "input": "part-06",
+      "regions": 138,
+      "nonempty": 138,
+      "txt": 138,
+      "srt": 138
+     },
+     {
+      "input": "part-07",
+      "regions": 134,
+      "nonempty": 134,
+      "txt": 134,
+      "srt": 134
+     },
+     {
+      "input": "part-08",
+      "regions": 72,
+      "nonempty": 72,
+      "txt": 72,
+      "srt": 72
+     },
+     {
+      "input": "part-09",
+      "regions": 324,
+      "nonempty": 324,
+      "txt": 324,
+      "srt": 324
+     },
+     {
+      "input": "part-10",
+      "regions": 323,
+      "nonempty": 323,
+      "txt": 323,
+      "srt": 323
+     },
+     {
+      "input": "part-11",
+      "regions": 293,
+      "nonempty": 293,
+      "txt": 293,
+      "srt": 293
+     },
+     {
+      "input": "part-12",
+      "regions": 179,
+      "nonempty": 179,
+      "txt": 179,
+      "srt": 179
+     },
+     {
+      "input": "part-13",
+      "regions": 125,
+      "nonempty": 125,
+      "txt": 125,
+      "srt": 125
+     },
+     {
+      "input": "part-14",
+      "regions": 135,
+      "nonempty": 134,
+      "txt": 134,
+      "srt": 134
+     },
+     {
+      "input": "part-15",
+      "regions": 180,
+      "nonempty": 180,
+      "txt": 180,
+      "srt": 180
+     },
+     {
+      "input": "part-16",
+      "regions": 149,
+      "nonempty": 149,
+      "txt": 149,
+      "srt": 149
+     },
+     {
+      "input": "part-17",
+      "regions": 178,
+      "nonempty": 178,
+      "txt": 178,
+      "srt": 178
+     },
+     {
+      "input": "part-18",
+      "regions": 100,
+      "nonempty": 100,
+      "txt": 100,
+      "srt": 100
+     }
+    ],
+    "errors": []
+   }
+  },
+  "chapter_group_partition": {
+   "passed": true,
+   "details": {
+    "chapters": 32,
+    "groups": 151,
+    "coverage_samples": 504201078,
+    "source_samples": 504201078,
+    "errors": []
+   }
+  },
+  "region_gap_accounting": {
+   "passed": true,
+   "details": {
+    "regions": 2977,
+    "nonempty": 2976,
+    "empty": [
+     "D1-P14-R0017"
+    ],
+    "gaps": 2848,
+    "gap_seconds": 5656.271375,
+    "cross_chapter_regions": 0,
+    "cross_group_regions": 0,
+    "dispositions": {
+     "nonempty_ASR_grouped_paraphrase_or_logged_editorial_omission": 2902,
+     "explicit_low_information_interval": 30,
+     "label_like_candidate": 44,
+     "empty_ASR": 1
+    },
+    "errors": [],
+    "limitation": "Routing is not proof of semantic completeness or recognition recall"
+   }
+  },
+  "local_Markdown_structure": {
+   "passed": true,
+   "details": {
+    "files": 39,
+    "checks": [
+     "one H1",
+     "heading progression",
+     "trailing whitespace",
+     "tabs",
+     "ASCII punctuation",
+     "single final newline",
+     "fenced-code closure",
+     "table separators"
+    ],
+    "errors": [],
+    "markdownlint_available": false,
+    "limitation": "Local fallback checks, not full markdownlint; no install or hooks"
+   }
+  },
+  "local_links": {
+   "passed": true,
+   "details": {
+    "files": 43,
+    "relative_links": 420,
+    "anchors": 52,
+    "broken": [],
+    "method": "Local target and heading-fragment resolution for Day 1 docs and the four edited global files; no network"
+   }
+  },
+  "privacy_pattern_scan": {
+   "passed": true,
+   "details": {
+    "files": 41,
+    "patterns": [
+     "email_address",
+     "phone_number",
+     "credential_prefix",
+     "signed_URL",
+     "JWT"
+    ],
+    "findings": [],
+    "limitation": "Heuristic only; not proof of complete privacy or redistribution rights; no matched values output"
+   }
+  },
+  "entity_ID_coverage": {
+   "passed": true,
+   "details": {
+    "used_ids": 67,
+    "missing": [],
+    "limitation": "Presence only, not correctness of attribution"
+   }
+  },
+  "chapter_evidence_structure": {
+   "passed": true,
+   "details": {
+    "chapters": 32,
+    "checked": [
+     "draft label",
+     "source interval",
+     "part interval/hash references",
+     "editorial limits",
+     "live-build/workshop context"
+    ],
+    "errors": []
+   }
+  },
+  "JSON_parse": {
+   "passed": true,
+   "details": {
+    "inputs": [
+     "docs/days/day-01/coverage-ledger.json",
+     "docs/days/day-01/input-inventory.json",
+     "docs/days/day-01/validation.json (self, parsed after write)"
+    ],
+    "errors": []
+   }
+  },
+  "quotation_marker_scan": {
+   "passed": true,
+   "details": {
+    "findings": [],
+    "method": "Markdown blockquote and double-quotation markers; heuristic, not listening"
+   }
+  }
+ },
+ "failed_checks": [],
+ "acceptance": {
+  "full_ASR_text_read": "All 18 TXT parts read in full in this curation session",
+  "audio_review": "not performed; required skill gate unmet",
+  "quotations": "none audio-verified; derivative uses paraphrase",
+  "semantic_completeness": "editorial intent and explicit omission ledger, not mechanically certified",
+  "external_outcomes": "not independently verified",
+  "redistribution_rights": "unestablished",
+  "event_synthesis": "not run"
+ },
+ "artifacts_excluding_this_report": {
+  "README.md": {
+   "bytes": 3484,
+   "sha256": "631d1e35dbb29bcbc51a050cb4b30e4940f1d7516890d508beb06fc823f1d1c7"
+  },
+  "coverage-ledger.json": {
+   "bytes": 1891043,
+   "sha256": "0492d85a00ab1a0d3b5079572b0a7eeee736fdbcd4b0fc1817994a75244747d9"
+  },
+  "editorial-change-log.md": {
+   "bytes": 6239,
+   "sha256": "58c0a3ae59ac30e3ae0c22bf0524ad54f2c8a3cc6f2c7dc315384d0ccd4d50cb"
+  },
+  "entities.md": {
+   "bytes": 15003,
+   "sha256": "c5420b5eb07fca9419c87a25f52da1b3e391e34a8b132b08592d382c42b8bece"
+  },
+  "gap-ledger.md": {
+   "bytes": 5309,
+   "sha256": "617c0ed2d9e8e95334b83504c45d57606fb0678ba3bc3d728bbb551482099570"
+  },
+  "input-inventory.json": {
+   "bytes": 14478,
+   "sha256": "87b851da74269426f8ffdd5d8cb91e0eff9f8691eac70160ad889d41cd6314ab"
+  },
+  "review-queue.md": {
+   "bytes": 8013,
+   "sha256": "b108e29ae288419c5182781ea0a6707216905eab0c3f70ba4219e61ae5cbcc80"
+  },
+  "sources.md": {
+   "bytes": 9823,
+   "sha256": "e212327c8af6ed38ca0acec819c9b2421f4fc959226bb2f94c89f0269da64c93"
+  },
+  "transcripts/01-opening-and-host-introductions.md": {
+   "bytes": 4392,
+   "sha256": "136e13a5726cc6b8f9c21532679d9e4cf5b55be30cf713da8d62f338eee2202a"
+  },
+  "transcripts/02-business-goals-tools-and-blank-slate.md": {
+   "bytes": 5251,
+   "sha256": "e35bfe2b4b84070b897fb435580e49a6c4ae98c1a8bedd5cf0fa93d0cedcc901"
+  },
+  "transcripts/03-grok-bot-101-product-principles.md": {
+   "bytes": 2433,
+   "sha256": "d9b064a22622732aff44accfcb4496c1adf946a1074306b81489b7106c4bf006"
+  },
+  "transcripts/04-grok-bot-101-demo-bots-approvals-and-teaching.md": {
+   "bytes": 5114,
+   "sha256": "c7b526fa47c830f7fe353d83ccd5b5d10652466f4a66a000bfb7d1a3b14a978a"
+  },
+  "transcripts/05-grok-bot-101-qr-failure-group-chat-and-manager.md": {
+   "bytes": 3288,
+   "sha256": "f259cfd31845964220a4dc267da84bfa56252182277e63377fd0d3baf5209e33"
+  },
+  "transcripts/06-grok-bot-101-questions-and-summary.md": {
+   "bytes": 3561,
+   "sha256": "4c0439d9c02c6eb56570d559294db798e21b19c5245105c4bcc5ed641c932fa6"
+  },
+  "transcripts/07-peter-yang-joins-and-audience-idea-research.md": {
+   "bytes": 4899,
+   "sha256": "0d9840b9082be6458e070d204d1bd43bd5cdbdb9d9023c5e909e54119673d0f9"
+  },
+  "transcripts/08-restaurant-ideas-to-pop-up-platform.md": {
+   "bytes": 5897,
+   "sha256": "c493200d047d9afce82d89dca7bc941b2589163be8ac97f2c8433ae31ec21ccb"
+  },
+  "transcripts/09-prototype-bot-dogfooding-and-peter-advice.md": {
+   "bytes": 5391,
+   "sha256": "d60c198c168285dbb750fd97d9e7a137750c59d6819a83f90a58c836da86604b"
+  },
+  "transcripts/10-tater-roles-and-repository-setup.md": {
+   "bytes": 4416,
+   "sha256": "79118f65472c2d5a1198577fc48e81338a27871c3716d965a1d438c176644556"
+  },
+  "transcripts/11-first-deploy-database-domain-and-main-rule.md": {
+   "bytes": 5238,
+   "sha256": "65f71bac5e2275d5499fe82cf64302a85510e0bf95f11bfa41bc07bb981021a4"
+  },
+  "transcripts/12-codie-sanchez-controversy-and-distribution.md": {
+   "bytes": 4724,
+   "sha256": "95e68cac79e5278300ac4ce9a216b83dd4c3e85abcd9621ac510c98d576ebf7c"
+  },
+  "transcripts/13-codie-sanchez-research-bot-lead-magnets-and-break.md": {
+   "bytes": 4828,
+   "sha256": "0b25fcb3463edaaf2148197d043198476be0cbe15f83be2dafee1cac927b10b6"
+  },
+  "transcripts/14-post-break-review-factory.md": {
+   "bytes": 3175,
+   "sha256": "d277074b8bca4481d304ed094e421662e17f59fc4e5a097d06ecc90419f6f161"
+  },
+  "transcripts/15-engineering-workshop-principles-and-use-cases.md": {
+   "bytes": 4953,
+   "sha256": "9bdd5b47b26972d137535a5594836164665d031cabcde1a65a43ef016ca8669a"
+  },
+  "transcripts/16-engineering-workshop-bot-fleet-demo.md": {
+   "bytes": 5616,
+   "sha256": "3be4c2f3118a93e84c7ce4a1ca2ba4a765dfe522ed7674dadcb68f2ce15c43fe"
+  },
+  "transcripts/17-review-channel-verification-and-waitlist.md": {
+   "bytes": 4674,
+   "sha256": "eb79b49d07fa907425abcfa38f40423c54bc5b6c6fe7c881ddfa41b6c0ecfbe1"
+  },
+  "transcripts/18-core-flow-debate-and-running-the-pop-up-first.md": {
+   "bytes": 4929,
+   "sha256": "27b5d98b6e603fd6966792bd296dd348796b03b6b659ad3502aeba768fd759f8"
+  },
+  "transcripts/19-venue-finder-maps-auth-and-flyers.md": {
+   "bytes": 3801,
+   "sha256": "235392f78303eff864e280d3db3d5e1abb12a82c5f21a8d2460170df68afcbd4"
+  },
+  "transcripts/20-knowledge-manager-stack-flyer-copy-and-merch.md": {
+   "bytes": 4131,
+   "sha256": "b126b5cc9ab6b8266fc475ded0f78ab8a83b67f6d518698f07e31b891ddce850"
+  },
+  "transcripts/21-venue-criteria-permits-and-art-pivot.md": {
+   "bytes": 6558,
+   "sha256": "e4846622a901bd83657c847958f360d5efced0d47bb50289390fd466465d7c22"
+  },
+  "transcripts/22-pm-workshop-colleague-model-and-bot-team.md": {
+   "bytes": 4009,
+   "sha256": "844572d2ad20b8d6f2958e2091bab9ebfd101766b0ec9c4b69bbcef3bff795dc"
+  },
+  "transcripts/23-pm-workshop-flylow-demo-and-questions.md": {
+   "bytes": 5688,
+   "sha256": "7aeb5ab2b3b2250162181f73da3f2618f9aa0a4200bb570bfbd3c12fd2dffdd9"
+  },
+  "transcripts/24-eric-narrows-audience-to-tech-brand-merch.md": {
+   "bytes": 4795,
+   "sha256": "bb1b6665b2f7aa7ba5b4dee33b720a16665146acfb80e8c4152c19b089ab4311"
+  },
+  "transcripts/25-merch-novelty-templates-and-tickets.md": {
+   "bytes": 4324,
+   "sha256": "8f5fc3d18f403774647b6a9780338ef69c4e2452459ad9680bd8fa8406b3e0c7"
+  },
+  "transcripts/26-build-a-grok-bot-merch-and-platform-advice.md": {
+   "bytes": 5091,
+   "sha256": "28eb29d947e6ab1f2828e3032c769153100a5bf2cc110892cb50b9cdd0593db7"
+  },
+  "transcripts/27-founders-workshop-framing-and-close-bot.md": {
+   "bytes": 4230,
+   "sha256": "2d01180b2c01819c97d75c903e887f922a6fdb36458fbdfa2e12ba54dc67b3e2"
+  },
+  "transcripts/28-founders-workshop-prod-stalk-proto-and-tips.md": {
+   "bytes": 4212,
+   "sha256": "459b4799b4030a58c78ecbd3485a7c1919e0cc1814dc2a29d99fbde6804f76de"
+  },
+  "transcripts/29-founders-questions-and-challenge.md": {
+   "bytes": 4023,
+   "sha256": "3075b8fd33fc6df579f1bf5fcafd63927cc837ca894eb7bd3bec387d6cbccba8"
+  },
+  "transcripts/30-jenny-joins-bot-roster-and-venue-criteria.md": {
+   "bytes": 4613,
+   "sha256": "eedc3a8afe2c3e26c451b831a44452f2fbc3d1290445d9f16594ede220eaab5d"
+  },
+  "transcripts/31-event-budget-permit-bot-and-overnight-agents.md": {
+   "bytes": 4052,
+   "sha256": "3b69241aaf0dd0dedfd8077ac515eeb3b7baad93f1a5c305d8bfe1b4f69f9f32"
+  },
+  "transcripts/32-day-one-retrospective.md": {
+   "bytes": 2336,
+   "sha256": "c2d800f646da6cbbd2987dc17b22e86b84047dbea4630cddedb93002d7883bf8"
+  },
+  "transcripts/README.md": {
+   "bytes": 15828,
+   "sha256": "dec9eeacc0fde4227b98696e7e2a2cc975c7067ed8804386ba9f7ff67b62a723"
+  }
+ },
+ "output_counts": {
+  "chapters": 32,
+  "groups": 151,
+  "Markdown": 39,
+  "files_including_this_report": 42
+ },
+ "method": "Bounded local Python standard-library checks via terminal; no raw mutation, no ffmpeg decode rerun, no markdownlint install",
+ "validation_history": [
+  {
+   "checked_utc": "2026-09-24T13:58:01.150528+00:00",
+   "result": "first pass: local_links failed only because validation.json did not exist until the report was written",
+   "findings": [
+    [
+     "docs/days/day-01/README.md",
+     "validation.json",
+     "missing_target"
+    ],
+    [
+     "docs/days/day-01/review-queue.md",
+     "validation.json",
+     "missing_target"
+    ],
+    [
+     "docs/days/day-01/sources.md",
+     "validation.json",
+     "missing_target"
+    ],
+    [
+     "docs/days/day-01/transcripts/README.md",
+     "../validation.json",
+     "missing_target"
+    ]
+   ]
+  },
+  {
+   "checked_utc": "2026-09-24T13:58:21.614512+00:00",
+   "result": "second pass after report creation: all checks passed"
+  }
+ ]
+}

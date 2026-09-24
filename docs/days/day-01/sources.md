@@ -1,5 +1,9 @@
 # Day 1 sources and validation
 
+Status: media and checkpoints structurally validated on 2026-09-16; an
+**ASR-based curation draft** was added on 2026-09-24 (see
+[curation pass](#curation-pass-on-2026-09-24)). No audio was listened to.
+
 ## Source and rights
 
 - Public source: [X broadcast 1AxRnZbVpjaxl](https://x.com/i/broadcasts/1AxRnZbVpjaxl).
@@ -11,8 +15,12 @@
 - Acquisition was requested by the operator in the earlier conversation.
   Exact retrieval timestamp/timezone and independent rights evidence remain
   unrecorded. Public availability is not redistribution permission.
-- Hosted-model raw-transcript processing permission and audio publication rights
-  remain open gates. No external transcription service is configured.
+- **Hosted-model processing:** the operator (Paul) explicitly approved
+  editor-hosted model curation of Day 1 raw ASR on 2026-09-24, for private
+  study, on the same basis as Days 2 and 3. This covers reading raw transcripts
+  in this editor model; it is not publication or redistribution permission.
+- Audio publication and redistribution rights remain open gates. No external
+  transcription service is configured, and no transcription was rerun.
 
 The inherited acquisition report describes an HLS download using yt-dlp
 2026.08.19, all 15,599 fragments acquired, audio extracted, and temporary video
@@ -159,9 +167,34 @@ filter comparison above resolved the discrepancy; no media was rewritten.
 - One empty-text recognition result in part 14; it does not prove silence.
 - Checkpoint signatures do not include the M4A hash, schema version, or runtime
   settings. A durable source/parts provenance manifest remains future work.
-- Raw JSON was inspected only in local memory for structural checks. No raw
-  transcript utterances were returned to this hosted model by those checks.
+- The 2026-09-16 structural checks inspected raw JSON only in local memory. The
+  2026-09-24 curation pass, under the approval above, read all TXT parts in this
+  hosted editor model; see below.
 - Compact Opus derivatives now use ordinary Git attributes, not LFS. Preparation
   timed out before completion; partial outputs are ignored and no audio is staged.
 - No video is tracked. Ignore patterns cannot prevent deliberate force-adds or
   identify video saved with a misleading extension.
+
+## Curation pass on 2026-09-24
+
+Authority: operator approval of editor-hosted curation for private study, as
+recorded above. Writes were limited to `docs/days/day-01/**` and the Day 1
+status lines in the root README, docs index, layout reference and roadmap.
+Raw `.data/day-01/` was read-only; no network, transcription rerun, caption
+input, Git staging or event synthesis was used.
+
+- All 18 TXT parts were read in full in chronological order. JSON supplied exact
+  region intervals and was cross-checked against TXT/SRT structurally.
+- Output: 32 chronological chapters, 151 timed groups, covering
+  00:00:00.000-08:45:12.567375 with half-open intervals. See the
+  [transcript index](transcripts/README.md), [entities](entities.md),
+  [gap ledger](gap-ledger.md), [editorial log](editorial-change-log.md) and
+  [review queue](review-queue.md).
+- Machine records: [input inventory](input-inventory.json) (all 78 files under
+  `.data/day-01/`, hashed before writing), [coverage ledger](coverage-ledger.json)
+  (all 2,977 regions routed, one empty region, inter-region gaps) and
+  [validation](validation.json) (fresh integrity, structure, link and privacy
+  pattern checks after writing).
+- The derivative is an edited nonverbatim conversation. No quotation is
+  audio-verified; the skill's audio checks for boundaries and consequential
+  claims remain **unmet**.
